@@ -179,3 +179,63 @@ create trigger daily_scores_updated_at
   before update on public.daily_scores
   for each row
   execute function public.set_updated_at();
+
+-- ---------------------------------------------------------------------------
+-- 3) Dynamic vocabulary (optional) — JSON files remain the app fallback
+--    Seed rows in Table Editor or SQL; empty tables → app uses data/*.json
+-- ---------------------------------------------------------------------------
+
+create table if not exists public.words (
+  id text primary key,
+  term text not null,
+  phonetic text,
+  definition text not null,
+  example text not null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create index if not exists words_term_idx on public.words (term);
+
+alter table public.words enable row level security;
+
+drop policy if exists "words_select_public" on public.words;
+create policy "words_select_public"
+  on public.words
+  for select
+  to anon, authenticated
+  using (true);
+
+drop trigger if exists words_updated_at on public.words;
+create trigger words_updated_at
+  before update on public.words
+  for each row
+  execute function public.set_updated_at();
+
+create table if not exists public.idioms (
+  id text primary key,
+  term text not null,
+  category text not null,
+  definition text not null,
+  example text not null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create index if not exists idioms_category_idx on public.idioms (category);
+create index if not exists idioms_term_idx on public.idioms (term);
+
+alter table public.idioms enable row level security;
+
+drop policy if exists "idioms_select_public" on public.idioms;
+create policy "idioms_select_public"
+  on public.idioms
+  for select
+  to anon, authenticated
+  using (true);
+
+drop trigger if exists idioms_updated_at on public.idioms;
+create trigger idioms_updated_at
+  before update on public.idioms
+  for each row
+  execute function public.set_updated_at();

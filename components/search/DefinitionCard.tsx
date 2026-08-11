@@ -15,11 +15,13 @@ export function DefinitionCard({ item }: Props) {
   const t = useT();
   const practiceHref = `/practice?target=${encodeURIComponent(item.term)}`;
   const kindLabel =
-    item.kind === "idiom"
-      ? item.category
-        ? categoryLabel(t, item.category)
-        : t.common.idiom
-      : t.common.word;
+    item.source === "dictionary"
+      ? t.search.sourceDictionary
+      : item.kind === "idiom"
+        ? item.category
+          ? categoryLabel(t, item.category)
+          : t.common.idiom
+        : t.common.word;
 
   return (
     <article className="rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-5">
@@ -35,7 +37,7 @@ export function DefinitionCard({ item }: Props) {
             <p className="mt-1 text-sm text-[var(--muted)]">{item.phonetic}</p>
           ) : null}
         </div>
-        <PlayAudioButton text={item.term} />
+        <PlayAudioButton text={item.term} audioUrl={item.audioUrl} />
       </div>
       <p className="mt-4 text-[var(--foam)]">{item.definition}</p>
       <p className="mt-3 text-sm italic text-[var(--muted)]">

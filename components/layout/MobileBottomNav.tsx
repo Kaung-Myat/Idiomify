@@ -24,7 +24,7 @@ export function MobileBottomNav() {
   const pathname = usePathname();
   const t = useT();
 
-  const labels: Record<(typeof MOBILE_NAV)[number]["key"], string> = {
+  const labels: Partial<Record<(typeof MOBILE_NAV)[number]["key"], string>> = {
     console: t.nav.console,
     search: t.nav.search,
     practice: t.nav.practice,
@@ -69,12 +69,8 @@ export function MobileBottomNav() {
                   className={isCenter ? "h-5 w-5" : "h-[18px] w-[18px]"}
                 />
               </span>
-              <span
-                className={`max-w-full truncate px-0.5 text-[10px] font-medium leading-tight ${
-                  isCenter ? "mt-0.5" : ""
-                }`}
-              >
-                {labels[item.key]}
+              <span className="max-w-full truncate px-0.5 text-[10px] font-medium leading-tight">
+                {labels[item.key] ?? item.key}
               </span>
             </Link>
           );

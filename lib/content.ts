@@ -62,6 +62,7 @@ export function searchDefinitions(query: string): DefinitionResult[] {
       phonetic: w.phonetic,
       definition: w.definition,
       example: w.example,
+      source: "curated" as const,
     }));
 
   const idiomHits: DefinitionResult[] = idioms
@@ -78,6 +79,7 @@ export function searchDefinitions(query: string): DefinitionResult[] {
       category: i.category,
       definition: i.definition,
       example: i.example,
+      source: "curated" as const,
     }));
 
   return [...wordHits, ...idiomHits];
@@ -96,6 +98,7 @@ export function lookupDefinition(query: string): DefinitionResult | null {
       phonetic: exactWord.phonetic,
       definition: exactWord.definition,
       example: exactWord.example,
+      source: "curated",
     };
   }
 
@@ -108,6 +111,7 @@ export function lookupDefinition(query: string): DefinitionResult | null {
       category: exactIdiom.category,
       definition: exactIdiom.definition,
       example: exactIdiom.example,
+      source: "curated",
     };
   }
 

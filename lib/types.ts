@@ -14,6 +14,8 @@ export type Idiom = {
   example: string;
 };
 
+export type DefinitionSource = "curated" | "dictionary";
+
 export type DefinitionResult = {
   kind: "word" | "idiom";
   id: string;
@@ -22,6 +24,9 @@ export type DefinitionResult = {
   category?: string;
   definition: string;
   example: string;
+  /** curated = local/JSON/Supabase; dictionary = Free Dictionary API */
+  source?: DefinitionSource;
+  audioUrl?: string;
 };
 
 export type EasyQuestion = {

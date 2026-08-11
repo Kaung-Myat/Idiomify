@@ -1,5 +1,11 @@
 import { NextResponse } from "next/server";
-import { lookupDefinition, searchDefinitions } from "@/lib/content";
+import {
+  loadCatalog,
+  lookupCatalogDefinition,
+  mergeDefinitionResults,
+  searchCatalogDefinitions,
+} from "@/lib/content/repository";
+import { fetchFreeDictionary } from "@/lib/dictionary/free-dictionary";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -12,12 +18,28 @@ export async function GET(request: Request) {
     );
   }
 
-  const exact = lookupDefinition(q);
-  const results = searchDefinitions(q);
+  const catalog = await loadCatalog();
+  const curatedResults = searchCatalogDefinitions(catalog, q);
+  const curatedMatch = lookupCatalogDefinition(catalog, q);
+
+  const dictionaryResults = await fetchFreeDictionary(q);
+  const results = mergeDefinitionResults(curatedResults, dictionaryResults);
+
+  const match =
+    curatedMatch ??
+    dictionaryResults.find(
+      (r) => r.term.toLowerCase() === q.toLowerCase(),
+    ) ??
+    results[0] ??
+    null;
 
   return NextResponse.json({
     query: q,
-    match: exact,
+    match,
     results,
+    sources: {
+      catalog: catalog.source,
+      dictionary: dictionaryResults.length > 0,
+    },
   });
 }

@@ -115,14 +115,16 @@
     "emptyTitle": "ရှာဖွေရန် စတင်ပါ",
     "emptyDescription": "Search ကိုဖွင့်ပြီး စကားလုံး/idiom ရှာပါ — “resilient” သို့မဟုတ် “break the ice” စမ်းကြည့်ပါ။",
     "noMatchesTitle": "မတွေ့ရှိပါ",
-    "noMatchesDescription": "“{query}” အတွက် result မရှိပါ။ library ထဲမှ အခြားစကားလုံး/စကားစုကို စမ်းကြည့်ပါ။",
+    "noMatchesDescription": "“{query}” အတွက် result မရှိပါ။ library သို့မဟုတ် Free Dictionary မှ အခြားစကားလုံးကို စမ်းကြည့်ပါ။",
     "recents": "မကြာသေးမီက",
     "noRecents": "Recent ရှာဖွေမှု မရှိသေးပါ။ အပေါ်တွင် စာရိုက်ရှာပါ။",
     "clearRecents": "ရှင်းမည်",
     "removeRecent": "Recent မှ ဖယ်ရှားမည်",
     "playAudio": "အသံနားထောင်မည်",
     "playingAudio": "ဖွင့်နေသည်…",
-    "practiceSpeaking": "စကားပြောလေ့ကျင့်မည်"
+    "practiceSpeaking": "စကားပြောလေ့ကျင့်မည်",
+    "searching": "Library နှင့် dictionary ကို ရှာနေသည်…",
+    "sourceDictionary": "Free Dictionary"
   },
   "idioms": {
     "title": "စကားစု အမျိုးအစားများ",

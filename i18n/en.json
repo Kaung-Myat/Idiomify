@@ -115,14 +115,16 @@
     "emptyTitle": "Start searching",
     "emptyDescription": "Open search to look up words and idioms — try “resilient” or “break the ice”.",
     "noMatchesTitle": "No matches",
-    "noMatchesDescription": "Nothing found for “{query}”. Try another word or idiom from the library.",
+    "noMatchesDescription": "Nothing found for “{query}”. Try another word or idiom — curated library first, then Free Dictionary.",
     "recents": "Recent",
     "noRecents": "No recent searches yet. Type a word or idiom above.",
     "clearRecents": "Clear",
     "removeRecent": "Remove from recents",
     "playAudio": "Play audio",
     "playingAudio": "Playing…",
-    "practiceSpeaking": "Practice speaking"
+    "practiceSpeaking": "Practice speaking",
+    "searching": "Searching library and dictionary…",
+    "sourceDictionary": "Free Dictionary"
   },
   "idioms": {
     "title": "Idiom categories",

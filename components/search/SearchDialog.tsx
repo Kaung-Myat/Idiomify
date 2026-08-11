@@ -1,9 +1,8 @@
 "use client";
 
-import { useDeferredValue, useEffect, useId, useMemo, useRef, useState } from "react";
+import { useDeferredValue, useEffect, useId, useRef, useState } from "react";
 import { IconSearch } from "@/components/layout/NavIcons";
 import { categoryLabel, fmt } from "@/lib/i18n";
-import { searchDefinitions } from "@/lib/content";
 import { useSearchRecentsStore } from "@/lib/search-recents-store";
 import { useT } from "@/lib/locale-store";
 import type { DefinitionResult } from "@/lib/types";
@@ -15,6 +14,19 @@ type Props = {
   initialQuery?: string;
 };
 
+function sourceLabel(
+  item: DefinitionResult,
+  t: ReturnType<typeof useT>,
+): string {
+  if (item.source === "dictionary") return t.search.sourceDictionary;
+  if (item.kind === "idiom") {
+    return item.category
+      ? categoryLabel(t, item.category)
+      : t.common.idiom;
+  }
+  return t.common.word;
+}
+
 export function SearchDialog({
   open,
   onClose,
@@ -25,16 +37,14 @@ export function SearchDialog({
   const titleId = useId();
   const inputRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState(initialQuery);
+  const [results, setResults] = useState<DefinitionResult[]>([]);
+  const [loading, setLoading] = useState(false);
   const recents = useSearchRecentsStore((s) => s.recents);
   const clearRecents = useSearchRecentsStore((s) => s.clearRecents);
   const removeRecent = useSearchRecentsStore((s) => s.removeRecent);
 
   const trimmed = query.trim();
   const deferredQuery = useDeferredValue(trimmed);
-  const results = useMemo(
-    () => (deferredQuery ? searchDefinitions(deferredQuery) : []),
-    [deferredQuery],
-  );
 
   useEffect(() => {
     if (!open) return;
@@ -57,6 +67,42 @@ export function SearchDialog({
       window.removeEventListener("keydown", onKey);
     };
   }, [open, initialQuery, onClose]);
+
+  useEffect(() => {
+    if (!open) return;
+    if (!deferredQuery) {
+      setResults([]);
+      setLoading(false);
+      return;
+    }
+
+    const controller = new AbortController();
+    setLoading(true);
+    const timer = window.setTimeout(async () => {
+      try {
+        const res = await fetch(
+          `/api/define?q=${encodeURIComponent(deferredQuery)}`,
+          { signal: controller.signal },
+        );
+        if (!res.ok) {
+          setResults([]);
+          return;
+        }
+        const data = (await res.json()) as { results?: DefinitionResult[] };
+        setResults(Array.isArray(data.results) ? data.results : []);
+      } catch (err) {
+        if ((err as Error).name === "AbortError") return;
+        setResults([]);
+      } finally {
+        setLoading(false);
+      }
+    }, 220);
+
+    return () => {
+      controller.abort();
+      window.clearTimeout(timer);
+    };
+  }, [deferredQuery, open]);
 
   if (!open) return null;
 
@@ -143,11 +189,7 @@ export function SearchDialog({
                         className="flex w-full flex-col items-start gap-0.5 rounded-xl px-3 py-3 text-left hover:bg-[var(--hover-fill)]"
                       >
                         <span className="text-[10px] uppercase tracking-[0.12em] text-[var(--accent)]">
-                          {item.kind === "idiom"
-                            ? item.category
-                              ? categoryLabel(t, item.category)
-                              : t.common.idiom
-                            : t.common.word}
+                          {sourceLabel(item, t)}
                         </span>
                         <span className="font-semibold text-[var(--foam)]">
                           {item.term}
@@ -169,25 +211,25 @@ export function SearchDialog({
                 </ul>
               )}
             </div>
-          ) : deferredQuery && results.length === 0 ? (
+          ) : loading && results.length === 0 ? (
+            <p className="px-4 py-10 text-center text-sm text-[var(--muted)]">
+              {t.search.searching}
+            </p>
+          ) : deferredQuery && !loading && results.length === 0 ? (
             <p className="px-4 py-10 text-center text-sm text-[var(--muted)]">
               {fmt(t.search.noMatchesDescription, { query: deferredQuery })}
             </p>
           ) : (
             <ul className="px-2 py-2">
               {results.map((item) => (
-                <li key={`${item.kind}-${item.id}`}>
+                <li key={`${item.kind}-${item.id}-${item.source ?? "curated"}`}>
                   <button
                     type="button"
                     onClick={() => pick(item)}
                     className="flex w-full flex-col items-start gap-0.5 rounded-xl px-3 py-3 text-left hover:bg-[var(--hover-fill)]"
                   >
                     <span className="text-[10px] uppercase tracking-[0.12em] text-[var(--accent)]">
-                      {item.kind === "idiom"
-                        ? item.category
-                          ? categoryLabel(t, item.category)
-                          : t.common.idiom
-                        : t.common.word}
+                      {sourceLabel(item, t)}
                     </span>
                     <span className="font-semibold text-[var(--foam)]">
                       {item.term}

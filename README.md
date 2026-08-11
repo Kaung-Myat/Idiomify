@@ -21,13 +21,23 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY="your_anon_or_publishable_key"
 NEXT_PUBLIC_PYTHON_SCORE_URL="http://localhost:8000/score"
 ```
 
-## Supabase (auth + progress)
+## Supabase (auth + progress + optional content)
 
 1. Enable **Google** + **Email** providers in Authentication.
 2. Add redirect URL: `http://localhost:3000/auth/callback`
-3. Run SQL from [`supabase/schema.sql`](supabase/schema.sql) in the Supabase SQL Editor (creates `learner_progress` with RLS).
+3. Run SQL from [`supabase/schema.sql`](supabase/schema.sql) in the Supabase SQL Editor.
+4. *(Optional)* Seed `words` / `idioms` tables — see [`supabase/seed-content.example.sql`](supabase/seed-content.example.sql).  
+   If those tables are empty or missing, the app falls back to `data/words.json` and `data/idioms.json`.
 
-## Python pronunciation server
+## Content sources
+
+| Source | Role |
+|--------|------|
+| `data/*.json` | Curated fallback for games, practice, idioms browse |
+| Supabase `words` / `idioms` | Optional live catalog (used by `/api/content` when seeded) |
+| [Free Dictionary API](https://dictionaryapi.dev/) | Live search enrichment (no API key) via `/api/define` |
+
+Search flow: curated library first, then Free Dictionary for extra definitions.
 
 ```bash
 cd python_server
@@ -42,7 +52,7 @@ Scoring uses Faster-Whisper speech-to-text + text similarity (not phoneme diagno
 
 ## Features
 
-- Search words/idioms with definitions
+- Search words/idioms (curated library + Free Dictionary enrichment)
 - Practice speaking with accuracy % + word mismatch highlight
 - Games: Easy (MCQ / Matching), Medium (Cloze / Listening), Hard (timed speaking)
 - Badges, points, Burmese/English UI
