@@ -1,0 +1,435 @@
+{
+  "app": {
+    "name": "Idiomify",
+    "learner": "Learner",
+    "tagline": "Pronunciation, idioms & vocabulary"
+  },
+  "nav": {
+    "console": "Overview",
+    "home": "Home",
+    "search": "Search",
+    "idioms": "Idioms",
+    "practice": "Practice",
+    "games": "Games",
+    "badges": "Badges",
+    "settings": "Settings"
+  },
+  "common": {
+    "points": "{count} pts",
+    "progress": "Progress",
+    "next": "Next",
+    "finish": "Finish",
+    "playAgain": "Play again",
+    "check": "Check",
+    "correct": "Correct!",
+    "word": "Word",
+    "idiom": "Idiom",
+    "idiomsCount": "{count} idioms",
+    "loadingPractice": "Loading practice session…",
+    "close": "Close"
+  },
+  "home": {
+    "headline": "Speak idioms clearly. Learn words that stick.",
+    "subtitle": "Search vocabulary, practice pronunciation with live match scores, and level up through Easy, Medium, and Hard games.",
+    "getStarted": "Get Started",
+    "featureSearch": "Search words & idioms",
+    "featureSpeak": "Live pronunciation scoring",
+    "featureGames": "Gamified practice levels",
+    "aboutTitle": "What is Idiomify?",
+    "aboutBody": "Idiomify is an NLP-powered English learning app for project demonstrations. It helps learners move from knowing a word to speaking it correctly — with instant feedback, idiom categories, and gamified drills.",
+    "featuresTitle": "Core features",
+    "featureCards": {
+      "pronunciation": {
+        "title": "Pronunciation checker",
+        "description": "Speak into the mic and get a speech match score with helpful feedback."
+      },
+      "idioms": {
+        "title": "Idiom masterclass",
+        "description": "Browse Business, Daily Life, Emotions, and Travel idioms with examples."
+      },
+      "games": {
+        "title": "Gamified modules",
+        "description": "Easy MCQ, Medium cloze, and Hard timed speaking drills with points."
+      },
+      "badges": {
+        "title": "Badges & progress",
+        "description": "Earn points, unlock badges, and track your learning milestones."
+      }
+    },
+    "howTitle": "How it works",
+    "steps": {
+      "1": "Search a word or idiom to see its definition and example.",
+      "2": "Practice speaking and receive a live match accuracy score.",
+      "3": "Play Easy, Medium, or Hard games to reinforce learning.",
+      "4": "Collect points and unlock badges in your dashboard."
+    },
+    "ctaTitle": "Ready to start learning?",
+    "ctaSubtitle": "Create an account or log in to open your learning overview.",
+    "searchWords": "Search words",
+    "practiceSpeaking": "Practice speaking",
+    "playGames": "Play games"
+  },
+  "sidebar": {
+    "menu": "Menu",
+    "collapse": "Collapse",
+    "open": "Open sidebar",
+    "close": "Close sidebar"
+  },
+  "console": {
+    "title": "Your learning overview",
+    "subtitle": "See your progress at a glance, then jump into a module.",
+    "welcome": "Welcome back, {name}",
+    "statsTitle": "Quick stats",
+    "statsBadges": "{count} badges unlocked",
+    "modulesTitle": "Modules",
+    "eyebrow": "Overview",
+    "openModule": "Open",
+    "cards": {
+      "search": {
+        "title": "Search",
+        "description": "Look up words and idioms with definitions."
+      },
+      "idioms": {
+        "title": "Idioms",
+        "description": "Browse categories and learn expressions."
+      },
+      "practice": {
+        "title": "Practice",
+        "description": "Speak phrases and get match scores."
+      },
+      "games": {
+        "title": "Games",
+        "description": "Easy, Medium, and Hard challenges."
+      },
+      "badges": {
+        "title": "Badges",
+        "description": "Track milestones and earned rewards."
+      }
+    }
+  },
+  "search": {
+    "title": "Search",
+    "subtitle": "Look up vocabulary words and idioms with definitions and examples.",
+    "placeholder": "Search a word or idiom…",
+    "openSearch": "Search",
+    "emptyTitle": "Start searching",
+    "emptyDescription": "Open search to look up words and idioms — try “resilient” or “break the ice”.",
+    "noMatchesTitle": "No matches",
+    "noMatchesDescription": "Nothing found for “{query}”. Try another word or idiom from the library.",
+    "recents": "Recent",
+    "noRecents": "No recent searches yet. Type a word or idiom above.",
+    "clearRecents": "Clear",
+    "removeRecent": "Remove from recents",
+    "playAudio": "Play audio",
+    "playingAudio": "Playing…",
+    "practiceSpeaking": "Practice speaking"
+  },
+  "idioms": {
+    "title": "Idiom categories",
+    "eyebrow": "Masterclass",
+    "subtitle": "Browse curated idioms by topic, then practice speaking them.",
+    "browseCategory": "Browse idioms",
+    "filterPlaceholder": "Filter idioms in this category…",
+    "backToCategories": "← All categories",
+    "backToIdioms": "← Back to idioms",
+    "categoryBlurbs": {
+      "business": "Meetings, deals, and workplace phrases that sound natural.",
+      "dailyLife": "Everyday expressions for home, study, and hanging out.",
+      "emotions": "Say how you feel with idioms people actually use.",
+      "travel": "Airport, hotel, and trip talk that travels well."
+    }
+  },
+  "categories": {
+    "Business": "Business",
+    "Daily Life": "Daily Life",
+    "Emotions": "Emotions",
+    "Travel": "Travel"
+  },
+  "practice": {
+    "title": "Practice speaking",
+    "subtitle": "Speak the target phrase to get a speech match score. Score 80%+ to earn +15 points. Use Demo Mode if the microphone is unavailable.",
+    "chooseTarget": "Choose a target",
+    "changeTarget": "Change phrase",
+    "searchTargets": "Search words or idioms…",
+    "noTargetsFound": "No matching phrases.",
+    "pickHint": "Pick a word or idiom to practice aloud."
+  },
+  "speak": {
+    "targetPhrase": "Target phrase",
+    "hearReference": "Hear reference",
+    "startSpeaking": "Start speaking",
+    "tapToSpeak": "Tap the mic and speak",
+    "processing": "Scoring your speech…",
+    "stop": "Stop",
+    "demoMode": "Demo Mode",
+    "listening": "Listening…",
+    "matchScore": "Speech match score",
+    "heard": "Heard:",
+    "matchAccuracy": "Match accuracy {accuracy} percent",
+    "unsupported": "Web Speech API unavailable here. Use Chrome on desktop, or Demo Mode.",
+    "notSupported": "Speech recognition is not supported in this browser. Use Demo Mode.",
+    "micDenied": "Microphone permission denied. Enable mic access or use Demo Mode.",
+    "speechError": "Speech error: {error}. Try Demo Mode.",
+    "demoSuffix": " (Demo Mode)",
+    "scorePython": "Score with Python",
+    "pythonRecord": "Recording for Python score…",
+    "pythonDone": "Python score ready",
+    "pythonUnsupported": "Python scoring is not available on this device. Try Demo Mode or Chrome desktop.",
+    "pythonFailed": "Could not score with Python. Falling back to browser speech if available.",
+    "pythonOffline": "Python scoring server is offline. Start it on port 8000, or use Demo Mode.",
+    "pythonServerError": "Python scoring server returned an error. Try again or use Demo Mode.",
+    "errorHint": "Tip: keep the Python server running, allow microphone access, or use Demo Mode.",
+    "scoringNote": "Score compares speech-to-text against the target (ASR similarity), not phoneme diagnostics.",
+    "diffNote": "Word comparison (target vs what was heard)",
+    "targetWords": "Target",
+    "heardWords": "Heard",
+    "legendMissing": "missing",
+    "legendMismatch": "mismatch",
+    "legendExtra": "extra words",
+    "diffPerfect": "All words matched."
+  },
+  "feedback": {
+    "excellent": "Excellent match — nearly perfect!",
+    "great": "Great match — clear and confident.",
+    "close": "Close! Listen to the reference and try again.",
+    "keepPracticing": "Keep practicing — slow down and enunciate.",
+    "tryAgain": "Try again — speak the target phrase clearly."
+  },
+  "games": {
+    "title": "Games",
+    "eyebrow": "Challenge modes",
+    "subtitle": "Train meaning, listening, and speaking — then climb the daily board.",
+    "back": "← Games",
+    "playLevel": "Enter level",
+    "easy": {
+      "title": "Easy",
+      "hubBlurb": "Warm up with quizzes, matching, flashcards, and timed speed rounds.",
+      "modesList": "MCQ · Matching · Flashcards · Speed",
+      "pageTitle": "Easy",
+      "pageSubtitle": "Pick a mode. +10 points per correct answer / known card.",
+      "modeMcq": "Multiple choice",
+      "modeMatching": "Matching",
+      "modeFlash": "Flashcards",
+      "modeSpeed": "Speed round",
+      "roundComplete": "Easy round complete",
+      "result": "You got {correct}/{total} correct · +{points} points",
+      "question": "Question {number}",
+      "matchingHint": "Select a term, then its definition.",
+      "matchingTerms": "Terms",
+      "matchingDefs": "Definitions",
+      "matchingComplete": "Matching round complete",
+      "matchingResult": "Matched {correct}/{total} · mistakes {mistakes} · +{points} points",
+      "flashFront": "Idiom",
+      "flashBack": "Meaning",
+      "flashTap": "Tap card to flip",
+      "flashGotIt": "Got it",
+      "flashStillLearning": "Still learning",
+      "flashComplete": "Flashcard round complete",
+      "flashResult": "Knew {correct}/{total} · +{points} points",
+      "lives": "{count} lives",
+      "streak": "{count} streak",
+      "timeUp": "Time’s up!",
+      "speedHint": "8 seconds each · 3 lives · streaks boost the pressure.",
+      "speedComplete": "Speed round complete",
+      "speedResult": "You got {correct}/{total} · best streak {streak} · +{points} points"
+    },
+    "medium": {
+      "title": "Medium",
+      "hubBlurb": "Cloze, listening, scramble, and dictation for deeper recall.",
+      "modesList": "Cloze · Listening · Scramble · Dictation",
+      "pageTitle": "Medium",
+      "pageSubtitle": "Pick a mode. +20 points per correct answer.",
+      "modeCloze": "Fill in the blank",
+      "modeListening": "Listening",
+      "modeScramble": "Scramble",
+      "modeDictation": "Dictation",
+      "roundComplete": "Medium round complete",
+      "result": "You got {correct}/{total} correct · +{points} points",
+      "fillBlank": "Fill in the blank",
+      "hint": "Hint: {hint}",
+      "placeholder": "Type the idiom…",
+      "notQuite": "Not quite — answer: {answer}",
+      "listeningQuestion": "Listening {number}",
+      "listeningPrompt": "Listen, then choose the meaning.",
+      "listeningHint": "Play the audio first. Options unlock after you listen.",
+      "playAudio": "Play audio",
+      "replayAudio": "Replay audio",
+      "listenFirst": "Listen to the audio before answering.",
+      "listeningComplete": "Listening round complete",
+      "listeningResult": "You got {correct}/{total} correct · +{points} points",
+      "scrambleBuild": "Tap words to rebuild the idiom",
+      "scrambleComplete": "Scramble round complete",
+      "scrambleResult": "You got {correct}/{total} correct · +{points} points",
+      "dictationPrompt": "Listen, then type what you heard.",
+      "dictationHint": "Replay as needed, then type the exact idiom.",
+      "dictationPlaceholder": "Type the idiom you heard…",
+      "dictationComplete": "Dictation round complete",
+      "dictationResult": "You got {correct}/{total} correct · +{points} points"
+    },
+    "hard": {
+      "title": "Hard",
+      "hubBlurb": "Timed speaking drills and multi-phrase pressure rounds.",
+      "modesList": "Timed speak · Multi-phrase",
+      "pageTitle": "Hard — Speaking pressure",
+      "pageSubtitle": "Speak clearly before the timer ends. Pass at 80%+ for +30 points. Time gets tighter as you go.",
+      "modeTimed": "Timed drills",
+      "modeMulti": "Multi-phrase",
+      "roundComplete": "Hard round complete",
+      "result": "Passed {passed}/{total} drills · +{points} points",
+      "drill": "Drill {current}/{total}",
+      "passed": "Passed! +30 points",
+      "timeUp": "Time’s up — try the next drill.",
+      "belowThreshold": "Below 80% — keep practicing.",
+      "nextDrill": "Next drill",
+      "multiHint": "Clear each phrase before time runs out. Later phrases get less time.",
+      "multiDrill": "Challenge {challenge}/{total}",
+      "phraseOf": "Phrase {current}/{total}",
+      "multiComplete": "Multi-phrase round complete",
+      "multiResult": "Passed {passed}/{total} phrases · +{points} points"
+    },
+    "daily": {
+      "badge": "Today",
+      "title": "Daily Challenge",
+      "hubBlurb": "A fixed five-step mix that refreshes every day — compete on the leaderboard.",
+      "play": "Play today’s challenge",
+      "pageSubtitle": "MCQ → cloze → scramble → dictation → speak. Same set for everyone today.",
+      "todayBest": "Your best today: {score}",
+      "progress": "Daily progress",
+      "scoreLabel": "Score {score}",
+      "complete": "Daily challenge complete",
+      "result": "Score {score} · best today {best}",
+      "leaderboard": "Today’s leaderboard",
+      "leaderboardHint": "Signed-in scores sync when Supabase daily_scores is set up. Local best always saves on this device.",
+      "leaderboardEmpty": "No shared scores yet — finish a run to post yours.",
+      "localOnly": "Device best today: {score}",
+      "stepMcq": "Step 1 · Meaning",
+      "stepCloze": "Step 2 · Cloze",
+      "stepScramble": "Step 3 · Scramble",
+      "stepDictation": "Step 4 · Dictation",
+      "stepSpeak": "Step 5 · Speak"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "eyebrow": "Preferences",
+    "subtitle": "Account, appearance, and learning progress controls.",
+    "accountTitle": "Account",
+    "progressTitle": "Progress",
+    "themeTitle": "Appearance",
+    "themeSubtitle": "Choose a light or dark look for the overview.",
+    "themeDark": "Dark",
+    "themeLight": "Light",
+    "themeDarkHint": "Deep teal night mode for focused practice.",
+    "themeLightHint": "Bright foam surfaces for daytime reading.",
+    "themeActive": "Active",
+    "textScaleTitle": "Text size",
+    "textScaleSubtitle": "Scale text across the whole app.",
+    "textScaleSmall": "A",
+    "textScaleLarge": "A",
+    "textScaleValue": "{percent}%",
+    "textScaleReset": "Reset",
+    "notSignedIn": "You are not signed in.",
+    "resetProgress": "Reset local progress",
+    "resetConfirm": "Reset points, stats, and badges on this device?"
+  },
+  "badges": {
+    "title": "Badges",
+    "eyebrow": "Progress",
+    "subtitle": "Track milestones, speak scores, and game wins in one place.",
+    "summary": "Learner progress · {points} points · {unlocked} badges unlocked",
+    "reset": "Reset progress",
+    "resetConfirm": "Reset all points, badges, and stats for this demo profile?",
+    "unlocked": "Unlocked",
+    "locked": "Locked",
+    "unlockToast": "Badge unlocked",
+    "pointsLabel": "Points",
+    "overviewEyebrow": "Your collection",
+    "overviewTitle": "{unlocked} of {total} badges unlocked",
+    "pointsToward": "{points} / {goal} pts toward Point Collector",
+    "collection": "Badge collection",
+    "collectionTitle": "Badge shelf",
+    "collectionSubtitle": "Unlock medals by searching, speaking, and clearing game modes.",
+    "statLabels": {
+      "searches": "Searches",
+      "speaks": "Speak attempts",
+      "bestScore": "Best speak",
+      "easyRounds": "Easy rounds",
+      "mediumRounds": "Medium rounds",
+      "hardPasses": "Hard passes",
+      "gamesCompleted": "Games done",
+      "dailyChallenges": "Daily runs"
+    },
+    "statHints": {
+      "bestScore": "Goal: 95%+ for Perfect Score",
+      "gamesGoal": "Goal: {goal} games for Game Runner"
+    },
+    "stats": {
+      "searches": "Searches: {count}",
+      "speaks": "Speak attempts: {count}",
+      "bestScore": "Best speak score: {score}%",
+      "easyRounds": "Easy rounds: {count}",
+      "mediumRounds": "Medium rounds: {count}",
+      "hardPasses": "Hard passes: {count}",
+      "gamesCompleted": "Games completed: {count}",
+      "dailyChallenges": "Daily challenges: {count}"
+    },
+    "items": {
+      "first-word": {
+        "name": "First Word",
+        "description": "Complete your first search or speaking attempt."
+      },
+      "perfect-score": {
+        "name": "Perfect Score",
+        "description": "Achieve 95% or higher on a speak attempt."
+      },
+      "easy-starter": {
+        "name": "Easy Starter",
+        "description": "Finish one Easy game round."
+      },
+      "game-runner": {
+        "name": "Game Runner",
+        "description": "Complete 5 games of any difficulty."
+      },
+      "hard-champion": {
+        "name": "Hard Mode Champion",
+        "description": "Pass one Hard speaking drill."
+      },
+      "point-collector": {
+        "name": "Point Collector",
+        "description": "Reach 100 points."
+      },
+      "daily-grinder": {
+        "name": "Daily Grinder",
+        "description": "Finish one Daily Challenge."
+      }
+    }
+  },
+  "auth": {
+    "loginTitle": "Log in",
+    "loginSubtitle": "Sign in to continue to your learning overview.",
+    "loginButton": "Log in",
+    "signupLink": "Sign up",
+    "googleButton": "Continue with Google",
+    "orEmail": "or email",
+    "emailLabel": "Email",
+    "fullNameLabel": "Full name",
+    "passwordLabel": "Password",
+    "passwordHint": "At least 6 characters",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "noAccount": "No account yet?",
+    "haveAccount": "Already have an account?",
+    "signupTitle": "Sign up",
+    "signupSubtitle": "Create an account to save your progress.",
+    "signupButton": "Create account",
+    "signupOk": "Account created. Please log in.",
+    "backToLogin": "Back to login",
+    "callbackTitle": "Signing in…",
+    "signOutButton": "Sign out"
+  },
+  "locale": {
+    "label": "Language",
+    "en": "English",
+    "my": "မြန်မာ"
+  }
+}

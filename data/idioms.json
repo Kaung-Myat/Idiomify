@@ -1,0 +1,478 @@
+[
+  {
+    "id": "i01",
+    "term": "break the ice",
+    "category": "Daily Life",
+    "definition": "To start a conversation and make people feel more comfortable.",
+    "example": "She told a joke to break the ice at the party."
+  },
+  {
+    "id": "i02",
+    "term": "hit the books",
+    "category": "Daily Life",
+    "definition": "To study hard.",
+    "example": "I need to hit the books before the final exam."
+  },
+  {
+    "id": "i03",
+    "term": "under the weather",
+    "category": "Daily Life",
+    "definition": "Feeling slightly ill.",
+    "example": "I stayed home because I was under the weather."
+  },
+  {
+    "id": "i04",
+    "term": "call it a day",
+    "category": "Daily Life",
+    "definition": "To stop working on something for now.",
+    "example": "We've done enough; let's call it a day."
+  },
+  {
+    "id": "i05",
+    "term": "piece of cake",
+    "category": "Daily Life",
+    "definition": "Something very easy to do.",
+    "example": "The quiz was a piece of cake."
+  },
+  {
+    "id": "i06",
+    "term": "spill the beans",
+    "category": "Daily Life",
+    "definition": "To reveal a secret.",
+    "example": "Don't spill the beans about the surprise party."
+  },
+  {
+    "id": "i07",
+    "term": "cost an arm and a leg",
+    "category": "Daily Life",
+    "definition": "To be very expensive.",
+    "example": "That phone costs an arm and a leg."
+  },
+  {
+    "id": "i08",
+    "term": "get the ball rolling",
+    "category": "Business",
+    "definition": "To start a process or project.",
+    "example": "Let's get the ball rolling on the new campaign."
+  },
+  {
+    "id": "i09",
+    "term": "think outside the box",
+    "category": "Business",
+    "definition": "To think creatively and unconventionally.",
+    "example": "We need to think outside the box to win this client."
+  },
+  {
+    "id": "i10",
+    "term": "touch base",
+    "category": "Business",
+    "definition": "To make contact briefly for an update.",
+    "example": "I'll touch base with you after the meeting."
+  },
+  {
+    "id": "i11",
+    "term": "on the same page",
+    "category": "Business",
+    "definition": "In agreement or sharing the same understanding.",
+    "example": "Let's make sure we're on the same page before we pitch."
+  },
+  {
+    "id": "i12",
+    "term": "raise the bar",
+    "category": "Business",
+    "definition": "To set a higher standard.",
+    "example": "Their new product raised the bar for the industry."
+  },
+  {
+    "id": "i13",
+    "term": "cut corners",
+    "category": "Business",
+    "definition": "To do something poorly to save time or money.",
+    "example": "Don't cut corners on quality control."
+  },
+  {
+    "id": "i14",
+    "term": "back to square one",
+    "category": "Business",
+    "definition": "To have to start over again.",
+    "example": "The deal fell through, so we're back to square one."
+  },
+  {
+    "id": "i15",
+    "term": "move the needle",
+    "category": "Business",
+    "definition": "To make a noticeable positive impact.",
+    "example": "This feature should really move the needle on retention."
+  },
+  {
+    "id": "i16",
+    "term": "over the moon",
+    "category": "Emotions",
+    "definition": "Extremely happy or delighted.",
+    "example": "She was over the moon about her acceptance letter."
+  },
+  {
+    "id": "i17",
+    "term": "down in the dumps",
+    "category": "Emotions",
+    "definition": "Feeling sad or depressed.",
+    "example": "He's been down in the dumps since the match."
+  },
+  {
+    "id": "i18",
+    "term": "keep your chin up",
+    "category": "Emotions",
+    "definition": "Stay positive during a difficult time.",
+    "example": "Keep your chin up — things will get better."
+  },
+  {
+    "id": "i19",
+    "term": "wear your heart on your sleeve",
+    "category": "Emotions",
+    "definition": "To show your feelings openly.",
+    "example": "He wears his heart on his sleeve."
+  },
+  {
+    "id": "i20",
+    "term": "butterflies in your stomach",
+    "category": "Emotions",
+    "definition": "A nervous feeling before something important.",
+    "example": "I always get butterflies in my stomach before speaking."
+  },
+  {
+    "id": "i21",
+    "term": "lose your cool",
+    "category": "Emotions",
+    "definition": "To become angry or lose composure.",
+    "example": "Try not to lose your cool during the debate."
+  },
+  {
+    "id": "i22",
+    "term": "on cloud nine",
+    "category": "Emotions",
+    "definition": "Extremely happy.",
+    "example": "They were on cloud nine after the wedding."
+  },
+  {
+    "id": "i23",
+    "term": "hit the road",
+    "category": "Travel",
+    "definition": "To leave or begin a journey.",
+    "example": "We should hit the road before traffic gets bad."
+  },
+  {
+    "id": "i24",
+    "term": "off the beaten path",
+    "category": "Travel",
+    "definition": "In a place that is unusual or not popular with tourists.",
+    "example": "They found a cafe off the beaten path."
+  },
+  {
+    "id": "i25",
+    "term": "travel light",
+    "category": "Travel",
+    "definition": "To take very little luggage.",
+    "example": "For a weekend trip, travel light."
+  },
+  {
+    "id": "i26",
+    "term": "catch a flight",
+    "category": "Travel",
+    "definition": "To board an airplane for a trip.",
+    "example": "I need to catch a flight at noon."
+  },
+  {
+    "id": "i27",
+    "term": "jet lag",
+    "category": "Travel",
+    "definition": "Tiredness after a long flight across time zones.",
+    "example": "I slept all day because of jet lag."
+  },
+  {
+    "id": "i28",
+    "term": "live out of a suitcase",
+    "category": "Travel",
+    "definition": "To travel so often that you never fully unpack.",
+    "example": "Consultants often live out of a suitcase."
+  },
+  {
+    "id": "i29",
+    "term": "break a leg",
+    "category": "Daily Life",
+    "definition": "A way to wish someone good luck, especially before a performance.",
+    "example": "Break a leg at your audition tonight!"
+  },
+  {
+    "id": "i30",
+    "term": "the ball is in your court",
+    "category": "Business",
+    "definition": "It is your turn to take action or make a decision.",
+    "example": "I've sent the proposal — the ball is in your court."
+  },
+  {
+    "id": "i31",
+    "term": "keep someone in the loop",
+    "category": "Business",
+    "definition": "To keep someone informed about progress or news.",
+    "example": "Please keep me in the loop on the client updates."
+  },
+  {
+    "id": "i32",
+    "term": "cut to the chase",
+    "category": "Business",
+    "definition": "To get to the main point quickly.",
+    "example": "Let's cut to the chase — do we have a deal?"
+  },
+  {
+    "id": "i33",
+    "term": "hang in there",
+    "category": "Emotions",
+    "definition": "To keep going during a difficult time.",
+    "example": "Hang in there — exams will be over soon."
+  },
+  {
+    "id": "i34",
+    "term": "a weight off your shoulders",
+    "category": "Emotions",
+    "definition": "A feeling of relief after a worry is gone.",
+    "example": "Finishing the project was a weight off my shoulders."
+  },
+  {
+    "id": "i35",
+    "term": "wrap up",
+    "category": "Daily Life",
+    "definition": "To finish or conclude something.",
+    "example": "Let's wrap up the meeting in five minutes."
+  },
+  {
+    "id": "i36",
+    "term": "miss the boat",
+    "category": "Travel",
+    "definition": "To miss an opportunity by acting too late.",
+    "example": "If you wait too long, you may miss the boat."
+  },
+  {
+    "id": "i37",
+    "term": "bite the bullet",
+    "category": "Daily Life",
+    "definition": "To face a difficult situation with courage.",
+    "example": "I bit the bullet and asked for help."
+  },
+  {
+    "id": "i38",
+    "term": "burn the midnight oil",
+    "category": "Daily Life",
+    "definition": "To work or study late into the night.",
+    "example": "She burned the midnight oil before the exam."
+  },
+  {
+    "id": "i39",
+    "term": "hit the sack",
+    "category": "Daily Life",
+    "definition": "To go to bed.",
+    "example": "I'm exhausted — time to hit the sack."
+  },
+  {
+    "id": "i40",
+    "term": "once in a blue moon",
+    "category": "Daily Life",
+    "definition": "Very rarely.",
+    "example": "We only eat out once in a blue moon."
+  },
+  {
+    "id": "i41",
+    "term": "a blessing in disguise",
+    "category": "Daily Life",
+    "definition": "Something that seems bad at first but turns out to be good.",
+    "example": "Missing the bus was a blessing in disguise."
+  },
+  {
+    "id": "i42",
+    "term": "better late than never",
+    "category": "Daily Life",
+    "definition": "It is better to do something late than not do it at all.",
+    "example": "You finished the homework — better late than never."
+  },
+  {
+    "id": "i43",
+    "term": "let the cat out of the bag",
+    "category": "Daily Life",
+    "definition": "To accidentally reveal a secret.",
+    "example": "He let the cat out of the bag about the gift."
+  },
+  {
+    "id": "i44",
+    "term": "kill two birds with one stone",
+    "category": "Daily Life",
+    "definition": "To achieve two goals with a single action.",
+    "example": "I kill two birds with one stone by walking to the store."
+  },
+  {
+    "id": "i45",
+    "term": "bring to the table",
+    "category": "Business",
+    "definition": "To offer skills, ideas, or resources.",
+    "example": "What can each team member bring to the table?"
+  },
+  {
+    "id": "i46",
+    "term": "learn the ropes",
+    "category": "Business",
+    "definition": "To learn how to do a job or activity.",
+    "example": "It took a week to learn the ropes at the new office."
+  },
+  {
+    "id": "i47",
+    "term": "go the extra mile",
+    "category": "Business",
+    "definition": "To make a special effort beyond what is expected.",
+    "example": "She always goes the extra mile for clients."
+  },
+  {
+    "id": "i48",
+    "term": "in the driver's seat",
+    "category": "Business",
+    "definition": "In control of a situation.",
+    "example": "After the promotion, he was in the driver's seat."
+  },
+  {
+    "id": "i49",
+    "term": "put something on hold",
+    "category": "Business",
+    "definition": "To temporarily stop working on something.",
+    "example": "We put the launch on hold until next month."
+  },
+  {
+    "id": "i50",
+    "term": "take the lead",
+    "category": "Business",
+    "definition": "To be the first to act or to guide others.",
+    "example": "Can you take the lead on this presentation?"
+  },
+  {
+    "id": "i51",
+    "term": "weigh the options",
+    "category": "Business",
+    "definition": "To carefully consider different choices.",
+    "example": "Let's weigh the options before we decide."
+  },
+  {
+    "id": "i52",
+    "term": "win-win situation",
+    "category": "Business",
+    "definition": "An outcome that benefits everyone involved.",
+    "example": "The partnership created a win-win situation."
+  },
+  {
+    "id": "i53",
+    "term": "blow off steam",
+    "category": "Emotions",
+    "definition": "To release anger or stress by doing something energetic.",
+    "example": "I go for a run to blow off steam."
+  },
+  {
+    "id": "i54",
+    "term": "keep a straight face",
+    "category": "Emotions",
+    "definition": "To not smile or laugh even when something is funny.",
+    "example": "It was hard to keep a straight face during the joke."
+  },
+  {
+    "id": "i55",
+    "term": "get cold feet",
+    "category": "Emotions",
+    "definition": "To suddenly become too nervous to do something.",
+    "example": "He got cold feet before the speech."
+  },
+  {
+    "id": "i56",
+    "term": "have a soft spot for",
+    "category": "Emotions",
+    "definition": "To feel special affection for someone or something.",
+    "example": "I have a soft spot for old movies."
+  },
+  {
+    "id": "i57",
+    "term": "make someone's day",
+    "category": "Emotions",
+    "definition": "To make someone very happy.",
+    "example": "Your kind message made my day."
+  },
+  {
+    "id": "i58",
+    "term": "rub someone the wrong way",
+    "category": "Emotions",
+    "definition": "To annoy or irritate someone.",
+    "example": "His tone rubbed the manager the wrong way."
+  },
+  {
+    "id": "i59",
+    "term": "take something to heart",
+    "category": "Emotions",
+    "definition": "To be deeply affected by criticism or advice.",
+    "example": "Don't take every comment to heart."
+  },
+  {
+    "id": "i60",
+    "term": "wear thin",
+    "category": "Emotions",
+    "definition": "To become less patient or less effective over time.",
+    "example": "My patience is starting to wear thin."
+  },
+  {
+    "id": "i61",
+    "term": "get away from it all",
+    "category": "Travel",
+    "definition": "To take a break from everyday stress, often by traveling.",
+    "example": "We want to get away from it all this weekend."
+  },
+  {
+    "id": "i62",
+    "term": "packed like sardines",
+    "category": "Travel",
+    "definition": "Crowded tightly into a small space.",
+    "example": "The subway was packed like sardines."
+  },
+  {
+    "id": "i63",
+    "term": "call it a night",
+    "category": "Travel",
+    "definition": "To stop an activity and go to bed, often while traveling or out.",
+    "example": "After the museum, we called it a night."
+  },
+  {
+    "id": "i64",
+    "term": "make a pit stop",
+    "category": "Travel",
+    "definition": "To stop briefly during a trip, often for fuel or rest.",
+    "example": "Let's make a pit stop for coffee."
+  },
+  {
+    "id": "i65",
+    "term": "smooth sailing",
+    "category": "Travel",
+    "definition": "Progress that is easy and without problems.",
+    "example": "After the border check, it was smooth sailing."
+  },
+  {
+    "id": "i66",
+    "term": "take a scenic route",
+    "category": "Travel",
+    "definition": "To choose a longer path because it is more beautiful.",
+    "example": "We took the scenic route along the coast."
+  },
+  {
+    "id": "i67",
+    "term": "wanderlust",
+    "category": "Travel",
+    "definition": "A strong desire to travel and explore.",
+    "example": "Her wanderlust took her across Asia."
+  },
+  {
+    "id": "i68",
+    "term": "catch some shut-eye",
+    "category": "Travel",
+    "definition": "To get some sleep, especially during a trip.",
+    "example": "Try to catch some shut-eye on the overnight bus."
+  }
+]

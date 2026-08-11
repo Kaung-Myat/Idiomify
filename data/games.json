@@ -1,0 +1,289 @@
+{
+  "easy": [
+    {
+      "id": "e01",
+      "prompt": "What does \"break the ice\" mean?",
+      "options": [
+        "To start a conversation comfortably",
+        "To freeze water quickly",
+        "To cancel a meeting",
+        "To break a glass"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "e02",
+      "prompt": "What does \"piece of cake\" mean?",
+      "options": [
+        "A dessert recipe",
+        "Something very easy",
+        "An expensive gift",
+        "A long wait"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "e03",
+      "prompt": "What does \"under the weather\" mean?",
+      "options": [
+        "Feeling slightly ill",
+        "Standing in the rain",
+        "Checking the forecast",
+        "Feeling energetic"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "e04",
+      "prompt": "What does \"hit the books\" mean?",
+      "options": [
+        "Throw books away",
+        "Buy new textbooks",
+        "Study hard",
+        "Visit a library for fun"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "e05",
+      "prompt": "What does \"touch base\" mean?",
+      "options": [
+        "Play baseball",
+        "Make brief contact for an update",
+        "End a project",
+        "Ignore an email"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "e06",
+      "prompt": "What does \"on the same page\" mean?",
+      "options": [
+        "Reading together",
+        "Sitting side by side",
+        "Sharing the same understanding",
+        "Using the same notebook"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "e07",
+      "prompt": "What does \"over the moon\" mean?",
+      "options": [
+        "Extremely happy",
+        "Traveling to space",
+        "Feeling sleepy",
+        "Being confused"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "e08",
+      "prompt": "What does \"raise the bar\" mean?",
+      "options": [
+        "Lift gym equipment",
+        "Set a higher standard",
+        "Close a shop early",
+        "Reduce expectations"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "e09",
+      "prompt": "What does \"spill the beans\" mean?",
+      "options": [
+        "Cook dinner",
+        "Drop groceries",
+        "Reveal a secret",
+        "Clean the kitchen"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "e10",
+      "prompt": "What does \"call it a day\" mean?",
+      "options": [
+        "Name a holiday",
+        "Stop working for now",
+        "Start a new job",
+        "Plan tomorrow's tasks"
+      ],
+      "answerIndex": 1
+    }
+  ],
+  "matching": [
+    {
+      "id": "mp01",
+      "term": "break the ice",
+      "definition": "Start a conversation comfortably"
+    },
+    {
+      "id": "mp02",
+      "term": "piece of cake",
+      "definition": "Something very easy"
+    },
+    {
+      "id": "mp03",
+      "term": "hit the books",
+      "definition": "Study hard"
+    },
+    {
+      "id": "mp04",
+      "term": "touch base",
+      "definition": "Make brief contact for an update"
+    },
+    {
+      "id": "mp05",
+      "term": "over the moon",
+      "definition": "Extremely happy"
+    },
+    {
+      "id": "mp06",
+      "term": "raise the bar",
+      "definition": "Set a higher standard"
+    }
+  ],
+  "medium": [
+    {
+      "id": "m01",
+      "sentence": "She told a joke to _____ at the party.",
+      "answer": "break the ice",
+      "hint": "start a friendly conversation"
+    },
+    {
+      "id": "m02",
+      "sentence": "I need to _____ before the final exam.",
+      "answer": "hit the books",
+      "hint": "study hard"
+    },
+    {
+      "id": "m03",
+      "sentence": "Let's _____ on the new campaign this morning.",
+      "answer": "get the ball rolling",
+      "hint": "start the process"
+    },
+    {
+      "id": "m04",
+      "sentence": "She was _____ about her acceptance letter.",
+      "answer": "over the moon",
+      "hint": "extremely happy"
+    },
+    {
+      "id": "m05",
+      "sentence": "We should _____ before traffic gets bad.",
+      "answer": "hit the road",
+      "hint": "begin the journey"
+    }
+  ],
+  "listening": [
+    {
+      "id": "l01",
+      "speak": "break the ice",
+      "options": [
+        "Start a friendly conversation",
+        "Freeze water quickly",
+        "Cancel a meeting",
+        "Break a glass"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "l02",
+      "speak": "piece of cake",
+      "options": [
+        "A dessert recipe",
+        "Something very easy",
+        "An expensive gift",
+        "A long wait"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "l03",
+      "speak": "get the ball rolling",
+      "options": [
+        "Play sports",
+        "End a meeting",
+        "Start a process",
+        "Buy equipment"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "l04",
+      "speak": "over the moon",
+      "options": [
+        "Extremely happy",
+        "Traveling to space",
+        "Feeling sleepy",
+        "Being confused"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "l05",
+      "speak": "hit the road",
+      "options": [
+        "Repair a street",
+        "Begin a journey",
+        "Stop traveling",
+        "Buy a car"
+      ],
+      "answerIndex": 1
+    }
+  ],
+  "hard": [
+    {
+      "id": "h01",
+      "target": "Let's get the ball rolling on this project.",
+      "seconds": 15
+    },
+    {
+      "id": "h02",
+      "target": "I always get butterflies in my stomach before speaking.",
+      "seconds": 15
+    },
+    {
+      "id": "h03",
+      "target": "Please think outside the box for this challenge.",
+      "seconds": 15
+    },
+    {
+      "id": "h04",
+      "target": "Keep your chin up during difficult times.",
+      "seconds": 12
+    },
+    {
+      "id": "h05",
+      "target": "The ball is in your court now.",
+      "seconds": 12
+    }
+  ],
+  "multiHard": [
+    {
+      "id": "mh01",
+      "phrases": [
+        "Let's get the ball rolling.",
+        "The ball is in your court."
+      ],
+      "startSeconds": 28
+    },
+    {
+      "id": "mh02",
+      "phrases": [
+        "Keep your chin up.",
+        "I have butterflies in my stomach.",
+        "Think outside the box."
+      ],
+      "startSeconds": 36
+    },
+    {
+      "id": "mh03",
+      "phrases": [
+        "Break the ice with a joke.",
+        "Call it a day when you are ready."
+      ],
+      "startSeconds": 30
+    }
+  ]
+}

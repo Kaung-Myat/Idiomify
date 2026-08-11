@@ -1,0 +1,44 @@
+[
+  {
+    "id": "first-word",
+    "name": "First Word",
+    "description": "Complete your first search or speaking attempt.",
+    "rule": "searches >= 1 OR speaks >= 1"
+  },
+  {
+    "id": "perfect-score",
+    "name": "Perfect Score",
+    "description": "Achieve 95% or higher on a speak attempt.",
+    "rule": "bestSpeakScore >= 95"
+  },
+  {
+    "id": "easy-starter",
+    "name": "Easy Starter",
+    "description": "Finish one Easy game round.",
+    "rule": "easyRounds >= 1"
+  },
+  {
+    "id": "game-runner",
+    "name": "Game Runner",
+    "description": "Complete 5 games of any difficulty.",
+    "rule": "gamesCompleted >= 5"
+  },
+  {
+    "id": "hard-champion",
+    "name": "Hard Mode Champion",
+    "description": "Pass one Hard speaking drill.",
+    "rule": "hardPasses >= 1"
+  },
+  {
+    "id": "point-collector",
+    "name": "Point Collector",
+    "description": "Reach 100 points.",
+    "rule": "points >= 100"
+  },
+  {
+    "id": "daily-grinder",
+    "name": "Daily Grinder",
+    "description": "Finish one Daily Challenge.",
+    "rule": "dailyChallenges >= 1"
+  }
+]

@@ -1,0 +1,435 @@
+{
+  "app": {
+    "name": "Idiomify",
+    "learner": "သင်ယူသူ",
+    "tagline": "အသံထွက်၊ idioms နှင့် vocabulary"
+  },
+  "nav": {
+    "console": "Overview",
+    "home": "ပင်မစာမျက်နှာ",
+    "search": "ရှာဖွေရန်",
+    "idioms": "စကားစုများ",
+    "practice": "လေ့ကျင့်ရန်",
+    "games": "ဂိမ်းများ",
+    "badges": "ဘတ်ချ်များ",
+    "settings": "Settings"
+  },
+  "common": {
+    "points": "{count} မှတ်",
+    "progress": "တိုးတက်မှု",
+    "next": "ရှေ့သို့",
+    "finish": "ပြီးဆုံး",
+    "playAgain": "ထပ်ကစားမည်",
+    "check": "စစ်ဆေးမည်",
+    "correct": "မှန်ပါတယ်!",
+    "word": "စကားလုံး",
+    "idiom": "စကားစု",
+    "idiomsCount": "စကားစု {count} ခု",
+    "loadingPractice": "လေ့ကျင့်ခန်းကို ဖွင့်နေသည်…",
+    "close": "ပိတ်မည်"
+  },
+  "home": {
+    "headline": "စကားစုများကို ရှင်းလင်းစွာ ပြောပါ။ မှတ်ဉာဏ်ထဲတွင် ကျန်ရှိစေသော စကားလုံးများကို သင်ယူပါ။",
+    "subtitle": "ဝေါဟာရရှာဖွေပါ၊ အသံထွက်ကို တိုက်ရိုက်အမှတ်ဖြင့် လေ့ကျင့်ပါ၊ Easy/Medium/Hard ဂိမ်းများဖြင့် အဆင့်တက်ပါ။",
+    "getStarted": "စတင်မည်",
+    "featureSearch": "စကားလုံး/စကားစု ရှာဖွေခြင်း",
+    "featureSpeak": "တိုက်ရိုက်အသံထွက် အမှတ်ပေးခြင်း",
+    "featureGames": "Gamified လေ့ကျင့်ခန်း levels",
+    "aboutTitle": "Idiomify ဆိုတာ ဘာလဲ?",
+    "aboutBody": "Idiomify သည် project demonstration အတွက် NLP-powered English learning app တစ်ခုဖြစ်ပါသည်။ စကားလုံးကို သိရုံသာမက မှန်ကန်စွာ ပြောတတ်အောင် — instant feedback၊ idiom categories နှင့် gamified drills များဖြင့် ကူညီပေးပါသည်။",
+    "featuresTitle": "အဓိက features များ",
+    "featureCards": {
+      "pronunciation": {
+        "title": "အသံထွက် checker",
+        "description": "မိုက်ခ်ဖြင့် ပြောပြီး speech match score နှင့် feedback ရယူပါ။"
+      },
+      "idioms": {
+        "title": "Idiom masterclass",
+        "description": "Business, Daily Life, Emotions, Travel idioms များကို ဥပမာများနှင့်အတူ ကြည့်ရှုပါ။"
+      },
+      "games": {
+        "title": "Gamified modules",
+        "description": "Easy MCQ, Medium cloze, Hard timed speaking drills နှင့် points များ။"
+      },
+      "badges": {
+        "title": "Badges & progress",
+        "description": "Points ရယူပြီး badges unlock လုပ်ကာ learning milestones များကို track လုပ်ပါ။"
+      }
+    },
+    "howTitle": "ဘယ်လို အလုပ်လုပ်သလဲ",
+    "steps": {
+      "1": "စကားလုံး/idiom ရှာပြီး definition နှင့် example ကြည့်ပါ။",
+      "2": "စကားပြောလေ့ကျင့်ပြီး live match accuracy score ရယူပါ။",
+      "3": "Easy, Medium, Hard games များဖြင့် သင်ယူမှုကို အားဖြည့်ပါ။",
+      "4": "Dashboard တွင် points စုဆောင်းပြီး badges unlock လုပ်ပါ။"
+    },
+    "ctaTitle": "သင်ယူမှု စတင်ဖို့ အဆင်သင့်ပြီလား?",
+    "ctaSubtitle": "Account ဖွင့်ပါ သို့မဟုတ် login လုပ်ပြီး learning overview ကို ဖွင့်ပါ။",
+    "searchWords": "စကားလုံးရှာမည်",
+    "practiceSpeaking": "စကားပြောလေ့ကျင့်မည်",
+    "playGames": "ဂိမ်းကစားမည်"
+  },
+  "sidebar": {
+    "menu": "မီနူး",
+    "collapse": "ပိတ်မည်",
+    "open": "Sidebar ဖွင့်မည်",
+    "close": "Sidebar ပိတ်မည်"
+  },
+  "console": {
+    "title": "သင်၏ learning overview",
+    "subtitle": "တိုးတက်မှုကို အမြန်ကြည့်ပြီး module တစ်ခုသို့ ဆက်သွားပါ။",
+    "welcome": "ပြန်လည်ကြိုဆိုပါတယ်၊ {name}",
+    "statsTitle": "အမြန်စာရင်းအင်း",
+    "statsBadges": "badge {count} ခု unlock",
+    "modulesTitle": "Modules",
+    "eyebrow": "Overview",
+    "openModule": "ဖွင့်မည်",
+    "cards": {
+      "search": {
+        "title": "ရှာဖွေရန်",
+        "description": "စကားလုံးနှင့် စကားစုများ၏ အဓိပ္ပာယ်များကို ရှာပါ။"
+      },
+      "idioms": {
+        "title": "စကားစုများ",
+        "description": "အမျိုးအစားအလိုက် စကားစုများကို ကြည့်ရှုပါ။"
+      },
+      "practice": {
+        "title": "လေ့ကျင့်ရန်",
+        "description": "စကားပြောပြီး match score ရယူပါ။"
+      },
+      "games": {
+        "title": "ဂိမ်းများ",
+        "description": "Easy, Medium, Hard challenges များ။"
+      },
+      "badges": {
+        "title": "ဘတ်ချ်များ",
+        "description": "Milestone များနှင့် ရရှိသော rewards များကို ကြည့်ပါ။"
+      }
+    }
+  },
+  "search": {
+    "title": "ရှာဖွေရန်",
+    "subtitle": "စကားလုံးနှင့် စကားစုများ၏ အဓိပ္ပာယ်နှင့် ဥပမာဝါကျများကို ရှာဖွေပါ။",
+    "placeholder": "စကားလုံး သို့မဟုတ် စကားစု ရှာပါ…",
+    "openSearch": "ရှာမည်",
+    "emptyTitle": "ရှာဖွေရန် စတင်ပါ",
+    "emptyDescription": "Search ကိုဖွင့်ပြီး စကားလုံး/idiom ရှာပါ — “resilient” သို့မဟုတ် “break the ice” စမ်းကြည့်ပါ။",
+    "noMatchesTitle": "မတွေ့ရှိပါ",
+    "noMatchesDescription": "“{query}” အတွက် result မရှိပါ။ library ထဲမှ အခြားစကားလုံး/စကားစုကို စမ်းကြည့်ပါ။",
+    "recents": "မကြာသေးမီက",
+    "noRecents": "Recent ရှာဖွေမှု မရှိသေးပါ။ အပေါ်တွင် စာရိုက်ရှာပါ။",
+    "clearRecents": "ရှင်းမည်",
+    "removeRecent": "Recent မှ ဖယ်ရှားမည်",
+    "playAudio": "အသံနားထောင်မည်",
+    "playingAudio": "ဖွင့်နေသည်…",
+    "practiceSpeaking": "စကားပြောလေ့ကျင့်မည်"
+  },
+  "idioms": {
+    "title": "စကားစု အမျိုးအစားများ",
+    "eyebrow": "Masterclass",
+    "subtitle": "ခေါင်းစဉ်အလိုက် စကားစုများကို ကြည့်ရှုပြီး စကားပြောလေ့ကျင့်ပါ။",
+    "browseCategory": "Idioms ကြည့်မည်",
+    "filterPlaceholder": "ဤအမျိုးအစားထဲမှ idioms ကို စစ်ထုတ်မည်…",
+    "backToCategories": "← အမျိုးအစားအားလုံး",
+    "backToIdioms": "← စကားစုများသို့",
+    "categoryBlurbs": {
+      "business": "အစည်းအဝေး၊ deal နှင့် workplace အတွက် သဘာဝကျသော စကားစုများ။",
+      "dailyLife": "အိမ်၊ ကျောင်းနှင့် နေ့စဉ်အသုံးများသော စကားစုများ။",
+      "emotions": "ခံစားချက်ကို လူတွေ တကယ်သုံးတဲ့ idioms နဲ့ ပြောပါ။",
+      "travel": "လေဆိပ်၊ ဟိုတယ်နှင့် ခရီးသွား စကားပြောအသုံးများ။"
+    }
+  },
+  "categories": {
+    "Business": "လုပ်ငန်း",
+    "Daily Life": "နေ့စဉ်ဘဝ",
+    "Emotions": "ခံစားချက်များ",
+    "Travel": "ခရီးသွားခြင်း"
+  },
+  "practice": {
+    "title": "စကားပြောလေ့ကျင့်ခြင်း",
+    "subtitle": "ပစ်မှတ်စာသားကို ပြောပါ။ 80%+ ရရင် +15 မှတ် ရပါမည်။ မိုက်ခ်မရရင် Demo Mode ကို သုံးပါ။",
+    "chooseTarget": "ပစ်မှတ်ရွေးချယ်ပါ",
+    "changeTarget": "စာသားပြောင်းမည်",
+    "searchTargets": "စကားလုံး သို့မဟုတ် idiom ရှာမည်…",
+    "noTargetsFound": "ကိုက်ညီသော စာသား မရှိပါ။",
+    "pickHint": "အသံထွက် လေ့ကျင့်မည့် စကားလုံး သို့မဟုတ် idiom ရွေးပါ။"
+  },
+  "speak": {
+    "targetPhrase": "ပစ်မှတ်စာသား",
+    "hearReference": "ရည်ညွှန်းအသံနားထောင်မည်",
+    "startSpeaking": "စကားပြောစတင်မည်",
+    "tapToSpeak": "မိုက်ခ်ကို နှိပ်ပြီး ပြောပါ",
+    "processing": "အမှတ်တွက်နေသည်…",
+    "stop": "ရပ်မည်",
+    "demoMode": "Demo Mode",
+    "listening": "နားထောင်နေသည်…",
+    "matchScore": "စကားပြော ကိုက်ညီမှု အမှတ်",
+    "heard": "ကြားရသော:",
+    "matchAccuracy": "ကိုက်ညီမှု {accuracy} ရာခိုင်နှုန်း",
+    "unsupported": "Web Speech API မရနိုင်ပါ။ Desktop Chrome သုံးပါ၊ သို့မဟုတ် Demo Mode သုံးပါ။",
+    "notSupported": "ဤ browser တွင် speech recognition မရှိပါ။ Demo Mode သုံးပါ။",
+    "micDenied": "မိုက်ခ်ခွင့်ပြုချက် ပိတ်ထားသည်။ မိုက်ခ်ဖွင့်ပါ သို့မဟုတ် Demo Mode သုံးပါ။",
+    "speechError": "Speech error: {error}. Demo Mode စမ်းကြည့်ပါ။",
+    "demoSuffix": " (Demo Mode)",
+    "scorePython": "Python နဲ့ score",
+    "pythonRecord": "Python score အတွက် မှတ်တမ်းယူနေသည်…",
+    "pythonDone": "Python score ပြီးပါပြီ",
+    "pythonUnsupported": "ဤ device တွင် Python scoring မရနိုင်ပါ။ Demo Mode သို့မဟုတ် Chrome desktop သုံးပါ။",
+    "pythonFailed": "Python scoring မအောင်မြင်ပါ။ Browser speech သို့ fallback လုပ်မည်။",
+    "pythonOffline": "Python scoring server ပိတ်နေသည်။ Port 8000 တွင် စတင်ပါ၊ သို့မဟုတ် Demo Mode သုံးပါ။",
+    "pythonServerError": "Python server error ဖြစ်နေသည်။ ထပ်စမ်းပါ သို့မဟုတ် Demo Mode သုံးပါ။",
+    "errorHint": "Tip: Python server ဖွင့်ထားပါ၊ မိုက်ခ်ခွင့်ပြုပါ၊ သို့မဟုတ် Demo Mode သုံးပါ။",
+    "scoringNote": "Score သည် speech-to-text နှင့် target ကို နှိုင်းယှဉ်ခြင်း (ASR similarity) ဖြစ်ပြီး phoneme diagnostics မဟုတ်ပါ။",
+    "diffNote": "စကားလုံး နှိုင်းယှဉ်ချက် (target vs ကြားရသော)",
+    "targetWords": "Target",
+    "heardWords": "ကြားရသော",
+    "legendMissing": "ပျောက်",
+    "legendMismatch": "မကိုက်",
+    "legendExtra": "ပိုနေသော စကားလုံး",
+    "diffPerfect": "စကားလုံးအားလုံး ကိုက်ညီပါတယ်။"
+  },
+  "feedback": {
+    "excellent": "အလွန်ကောင်းပါတယ် — almost perfect!",
+    "great": "ကောင်းပါတယ် — ရှင်းလင်းပြီး ယုံ confidence ရှိပါတယ်။",
+    "close": "နီးပါးမှန်ပါတယ်! ရည်ညွှန်းအသံနားထောင်ပြီး ထပ်ကြိုးစားပါ။",
+    "keepPracticing": "ဆက်လေ့ကျင့်ပါ — နှေးနှေးပြောပြီး အသံထွက်ရှင်းအောင်လုပ်ပါ။",
+    "tryAgain": "ထပ်ကြိုးစားပါ — ပစ်မှတ်စာသားကို ရှင်းလင်းစွာ ပြောပါ။"
+  },
+  "games": {
+    "title": "ဂိမ်းများ",
+    "eyebrow": "Challenge modes",
+    "subtitle": "Meaning, listening, speaking လေ့ကျင့်ပြီး daily board မှာ ယှဉ်ပါ။",
+    "back": "← ဂိမ်းများ",
+    "playLevel": "Level ဝင်မည်",
+    "easy": {
+      "title": "Easy",
+      "hubBlurb": "MCQ, matching, flashcards နှင့် speed round များဖြင့် နွေးပါ။",
+      "modesList": "MCQ · Matching · Flashcards · Speed",
+      "pageTitle": "Easy",
+      "pageSubtitle": "Mode ရွေးပါ။ တစ်ခုမှန် / သိပြီး +10 မှတ်။",
+      "modeMcq": "Multiple choice",
+      "modeMatching": "Matching",
+      "modeFlash": "Flashcards",
+      "modeSpeed": "Speed round",
+      "roundComplete": "Easy round ပြီးပါပြီ",
+      "result": "{correct}/{total} မှန်ပါတယ် · +{points} မှတ်",
+      "question": "မေးခွန်း {number}",
+      "matchingHint": "Term တစ်ခုရွေးပြီး အဓိပ္ပာယ်ကို ကိုက်အောင်ရွေးပါ။",
+      "matchingTerms": "Terms",
+      "matchingDefs": "Definitions",
+      "matchingComplete": "Matching round ပြီးပါပြီ",
+      "matchingResult": "{correct}/{total} ကိုက်ညီ · အမှား {mistakes} · +{points} မှတ်",
+      "flashFront": "Idiom",
+      "flashBack": "အဓိပ္ပာယ်",
+      "flashTap": "Card ကို နှိပ်ပြီး ပြန်လှန်ပါ",
+      "flashGotIt": "သိပြီး",
+      "flashStillLearning": "မသိသေး",
+      "flashComplete": "Flashcard round ပြီးပါပြီ",
+      "flashResult": "{correct}/{total} သိပါတယ် · +{points} မှတ်",
+      "lives": "အသက် {count}",
+      "streak": "streak {count}",
+      "timeUp": "အချိန်ကုန်ပါပြီ!",
+      "speedHint": "တစ်ခုကို ၈ စက္ကန့် · အသက် ၃ · streak က pressure တိုးစေသည်။",
+      "speedComplete": "Speed round ပြီးပါပြီ",
+      "speedResult": "{correct}/{total} · အကောင်းဆုံး streak {streak} · +{points} မှတ်"
+    },
+    "medium": {
+      "title": "Medium",
+      "hubBlurb": "Cloze, listening, scramble, dictation ဖြင့် ပိုနက်အောင် လေ့ကျင့်ပါ။",
+      "modesList": "Cloze · Listening · Scramble · Dictation",
+      "pageTitle": "Medium",
+      "pageSubtitle": "Mode ရွေးပါ။ တစ်ခုမှန် +20 မှတ်။",
+      "modeCloze": "Blank ဖြည့်ပါ",
+      "modeListening": "Listening",
+      "modeScramble": "Scramble",
+      "modeDictation": "Dictation",
+      "roundComplete": "Medium round ပြီးပါပြီ",
+      "result": "{correct}/{total} မှန်ပါတယ် · +{points} မှတ်",
+      "fillBlank": "Blank ဖြည့်ပါ",
+      "hint": "Hint: {hint}",
+      "placeholder": "Idiom ရိုက်ပါ…",
+      "notQuite": "မမှန်သေးပါ — အဖြေ: {answer}",
+      "listeningQuestion": "Listening {number}",
+      "listeningPrompt": "နားထောင်ပြီး အဓိပ္ပာယ်ရွေးပါ။",
+      "listeningHint": "အရင် audio နားထောင်ပါ။ နားထောင်ပြီးမှ options ဖြေနိုင်မည်။",
+      "playAudio": "Audio ဖွင့်မည်",
+      "replayAudio": "Audio ထပ်ဖွင့်မည်",
+      "listenFirst": "မဖြေခင် audio ကို နားထောင်ပါ။",
+      "listeningComplete": "Listening round ပြီးပါပြီ",
+      "listeningResult": "{correct}/{total} မှန်ပါတယ် · +{points} မှတ်",
+      "scrambleBuild": "စကားလုံးများကို နှိပ်ပြီး idiom ပြန်တည်ဆောက်ပါ",
+      "scrambleComplete": "Scramble round ပြီးပါပြီ",
+      "scrambleResult": "{correct}/{total} မှန်ပါတယ် · +{points} မှတ်",
+      "dictationPrompt": "နားထောင်ပြီး ကြားသောစာကို ရိုက်ပါ။",
+      "dictationHint": "လိုရင် replay လုပ်ပြီး idiom အတိအကျ ရိုက်ပါ။",
+      "dictationPlaceholder": "ကြားသော idiom ကို ရိုက်ပါ…",
+      "dictationComplete": "Dictation round ပြီးပါပြီ",
+      "dictationResult": "{correct}/{total} မှန်ပါတယ် · +{points} မှတ်"
+    },
+    "hard": {
+      "title": "Hard",
+      "hubBlurb": "Timed speaking နှင့် multi-phrase pressure rounds။",
+      "modesList": "Timed speak · Multi-phrase",
+      "pageTitle": "Hard — Speaking pressure",
+      "pageSubtitle": "Timer မကုန်မီ ရှင်းလင်းစွာ ပြောပါ။ 80%+ ရရင် +30 မှတ်။ ရှေ့ဆက်လေ အချိန်တိုလေ။",
+      "modeTimed": "Timed drills",
+      "modeMulti": "Multi-phrase",
+      "roundComplete": "Hard round ပြီးပါပြီ",
+      "result": "{passed}/{total} drills အောင်မြင်ပါတယ် · +{points} မှတ်",
+      "drill": "Drill {current}/{total}",
+      "passed": "အောင်မြင်ပါတယ်! +30 မှတ်",
+      "timeUp": "အချိန်ကုန်ပါပြီ — နောက် drill ကို စမ်းကြည့်ပါ။",
+      "belowThreshold": "80% အောက် — ဆက်လေ့ကျင့်ပါ။",
+      "nextDrill": "နောက် drill",
+      "multiHint": "အချိန်မကုန်မီ phrase တိုင်းကို ရှင်းအောင်ပြောပါ။ နောက် phrase များ အချိန်တိုလာမည်။",
+      "multiDrill": "Challenge {challenge}/{total}",
+      "phraseOf": "Phrase {current}/{total}",
+      "multiComplete": "Multi-phrase round ပြီးပါပြီ",
+      "multiResult": "{passed}/{total} phrases အောင်မြင် · +{points} မှတ်"
+    },
+    "daily": {
+      "badge": "ယနေ့",
+      "title": "Daily Challenge",
+      "hubBlurb": "နေ့စဉ် ၅-step mix — leaderboard မှာ ယှဉ်နိုင်သည်။",
+      "play": "ယနေ့ challenge ကစားမည်",
+      "pageSubtitle": "MCQ → cloze → scramble → dictation → speak။ ယနေ့အတွက် အားလုံး တူညီသော set။",
+      "todayBest": "ယနေ့ အကောင်းဆုံး: {score}",
+      "progress": "Daily progress",
+      "scoreLabel": "Score {score}",
+      "complete": "Daily challenge ပြီးပါပြီ",
+      "result": "Score {score} · ယနေ့ best {best}",
+      "leaderboard": "ယနေ့ leaderboard",
+      "leaderboardHint": "Supabase daily_scores ရှိရင် signed-in scores sync ဖြစ်မည်။ Device မှာ local best အမြဲသိမ်းသည်။",
+      "leaderboardEmpty": "Shared score မရှိသေးပါ — ပြီးအောင်ကစားပြီး post လုပ်ပါ။",
+      "localOnly": "Device best ယနေ့: {score}",
+      "stepMcq": "Step 1 · Meaning",
+      "stepCloze": "Step 2 · Cloze",
+      "stepScramble": "Step 3 · Scramble",
+      "stepDictation": "Step 4 · Dictation",
+      "stepSpeak": "Step 5 · Speak"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "eyebrow": "Preferences",
+    "subtitle": "Account၊ appearance နှင့် learning progress ကို စီမံပါ။",
+    "accountTitle": "Account",
+    "progressTitle": "Progress",
+    "themeTitle": "Appearance",
+    "themeSubtitle": "Overview အတွက် light သို့မဟုတ် dark theme ရွေးပါ။",
+    "themeDark": "Dark",
+    "themeLight": "Light",
+    "themeDarkHint": "လေ့ကျင့်ရန် အဆင်ပြေသော deep teal night mode။",
+    "themeLightHint": "နေ့ခင်းစာဖတ်ရန် ကြည်လင်သော light surfaces။",
+    "themeActive": "အသုံးပြုနေသည်",
+    "textScaleTitle": "စာလုံးအရွယ်",
+    "textScaleSubtitle": "အက်ပ်တစ်ခုလုံး၏ စာလုံးအရွယ်ကို ချိန်ပါ။",
+    "textScaleSmall": "A",
+    "textScaleLarge": "A",
+    "textScaleValue": "{percent}%",
+    "textScaleReset": "မူလအတိုင်း",
+    "notSignedIn": "အကောင့်မဝင်ရသေးပါ။",
+    "resetProgress": "Local progress reset",
+    "resetConfirm": "ဤ device ပေါ်ရှိ points, stats နှင့် badges များကို reset လုပ်မလား?"
+  },
+  "badges": {
+    "title": "ဘတ်ချ်များ",
+    "eyebrow": "Progress",
+    "subtitle": "Milestone များ၊ speak scores နှင့် game wins များကို တစ်နေရာတည်းမှာ ကြည့်ပါ။",
+    "summary": "သင်ယူသူ တိုးတက်မှု · {points} မှတ် · badge {unlocked} ခု unlock",
+    "reset": "တိုးတက်မှု reset",
+    "resetConfirm": "ဤ demo profile ၏ မှတ်များ၊ badge များနှင့် stats အားလုံးကို reset လုပ်မလား?",
+    "unlocked": "Unlock ပြီး",
+    "locked": "Locked",
+    "unlockToast": "Badge unlock ပြီးပါပြီ",
+    "pointsLabel": "မှတ်များ",
+    "overviewEyebrow": "သင့်စုဆောင်းမှု",
+    "overviewTitle": "Badge {unlocked}/{total} ခု unlock ပြီး",
+    "pointsToward": "Point Collector အတွက် {points} / {goal} မှတ်",
+    "collection": "Badge collection",
+    "collectionTitle": "Badge shelf",
+    "collectionSubtitle": "Search, speak, games ဖြင့် medals unlock လုပ်ပါ။",
+    "statLabels": {
+      "searches": "ရှာဖွေမှု",
+      "speaks": "Speak attempts",
+      "bestScore": "Best speak",
+      "easyRounds": "Easy rounds",
+      "mediumRounds": "Medium rounds",
+      "hardPasses": "Hard passes",
+      "gamesCompleted": "Games done",
+      "dailyChallenges": "Daily runs"
+    },
+    "statHints": {
+      "bestScore": "Goal: Perfect Score အတွက် 95%+",
+      "gamesGoal": "Goal: Game Runner အတွက် game {goal} ခု"
+    },
+    "stats": {
+      "searches": "ရှာဖွေမှု: {count}",
+      "speaks": "စကားပြောကြိုးစားမှု: {count}",
+      "bestScore": "အမြင့်ဆုံး speak score: {score}%",
+      "easyRounds": "Easy rounds: {count}",
+      "mediumRounds": "Medium rounds: {count}",
+      "hardPasses": "Hard passes: {count}",
+      "gamesCompleted": "Games completed: {count}",
+      "dailyChallenges": "Daily challenges: {count}"
+    },
+    "items": {
+      "first-word": {
+        "name": "First Word",
+        "description": "ပထမဆုံး search သို့မဟုတ် speak attempt ပြီးပါပြီ။"
+      },
+      "perfect-score": {
+        "name": "Perfect Score",
+        "description": "Speak attempt တွင် 95% သို့မဟုတ် အထက် ရရှိပါ။"
+      },
+      "easy-starter": {
+        "name": "Easy Starter",
+        "description": "Easy game round တစ်ခု ပြီးမြောက်ပါ။"
+      },
+      "game-runner": {
+        "name": "Game Runner",
+        "description": "မည်သည့် level မဆို game 5 ခု ပြီးမြောက်ပါ။"
+      },
+      "hard-champion": {
+        "name": "Hard Mode Champion",
+        "description": "Hard speaking drill တစ်ခု အောင်မြင်ပါ။"
+      },
+      "point-collector": {
+        "name": "Point Collector",
+        "description": "100 မှတ် ရောက်ပါ။"
+      },
+      "daily-grinder": {
+        "name": "Daily Grinder",
+        "description": "Daily Challenge တစ်ခု ပြီးမြောက်ပါ။"
+      }
+    }
+  },
+  "auth": {
+    "loginTitle": "ဝင်မည်",
+    "loginSubtitle": "Learning overview သို့ ဆက်လက်ဝင်ရောက်ပါ။",
+    "loginButton": "ဝင်မည်",
+    "signupLink": "အကောင့်ဖွင့်မည်",
+    "googleButton": "Google ဖြင့် ဆက်လက်မည်",
+    "orEmail": "သို့မဟုတ် email",
+    "emailLabel": "Email",
+    "fullNameLabel": "အမည် အပြည့်အစုံ",
+    "passwordLabel": "Password",
+    "passwordHint": "အနည်းဆုံး စာလုံး ၆ လုံး",
+    "showPassword": "Password ပြမည်",
+    "hidePassword": "Password ဖျောက်မည်",
+    "noAccount": "အကောင့်မရှိသေးဘူးလား?",
+    "haveAccount": "အကောင့်ရှိပြီးသားလား?",
+    "signupTitle": "အကောင့်ဖွင့်မည်",
+    "signupSubtitle": "သင်၏ progress ကို သိမ်းရန် အကောင့်ဖန်တီးပါ။",
+    "signupButton": "အကောင့်ဖန်တီးမည်",
+    "signupOk": "အကောင့်ဖန်တီးပြီးပါပြီ။ ကျေးဇူးပြု၍ login ဝင်ပါ။",
+    "backToLogin": "Login သို့ပြန်",
+    "callbackTitle": "Signing in…",
+    "signOutButton": "ထွက်မည်"
+  },
+  "locale": {
+    "label": "ဘာသာစကား",
+    "en": "English",
+    "my": "မြန်မာ"
+  }
+}

@@ -1,0 +1,436 @@
+[
+  {
+    "id": "w01",
+    "term": "articulate",
+    "phonetic": "/ɑːˈtɪkjələt/",
+    "definition": "Able to express thoughts and ideas clearly and effectively.",
+    "example": "She gave an articulate explanation of the problem."
+  },
+  {
+    "id": "w02",
+    "term": "resilient",
+    "phonetic": "/rɪˈzɪliənt/",
+    "definition": "Able to recover quickly from difficulties.",
+    "example": "The team stayed resilient after the setback."
+  },
+  {
+    "id": "w03",
+    "term": "ambiguous",
+    "phonetic": "/æmˈbɪɡjuəs/",
+    "definition": "Open to more than one interpretation; unclear.",
+    "example": "His answer was deliberately ambiguous."
+  },
+  {
+    "id": "w04",
+    "term": "meticulous",
+    "phonetic": "/məˈtɪkjələs/",
+    "definition": "Showing great attention to detail; very careful.",
+    "example": "She kept meticulous notes during the lecture."
+  },
+  {
+    "id": "w05",
+    "term": "pragmatic",
+    "phonetic": "/præɡˈmætɪk/",
+    "definition": "Dealing with things sensibly and realistically.",
+    "example": "We need a pragmatic solution, not a perfect one."
+  },
+  {
+    "id": "w06",
+    "term": "eloquent",
+    "phonetic": "/ˈeləkwənt/",
+    "definition": "Fluent and persuasive in speaking or writing.",
+    "example": "His eloquent speech moved the audience."
+  },
+  {
+    "id": "w07",
+    "term": "collaborate",
+    "phonetic": "/kəˈlæbəreɪt/",
+    "definition": "To work jointly with others on a project.",
+    "example": "Designers and engineers collaborate closely."
+  },
+  {
+    "id": "w08",
+    "term": "innovate",
+    "phonetic": "/ˈɪnəveɪt/",
+    "definition": "To introduce new ideas or methods.",
+    "example": "Startups innovate to stay competitive."
+  },
+  {
+    "id": "w09",
+    "term": "persuade",
+    "phonetic": "/pəˈsweɪd/",
+    "definition": "To cause someone to do or believe something through reasoning.",
+    "example": "Can you persuade him to join the meeting?"
+  },
+  {
+    "id": "w10",
+    "term": "negotiate",
+    "phonetic": "/nɪˈɡəʊʃieɪt/",
+    "definition": "To discuss something in order to reach an agreement.",
+    "example": "They negotiated a better contract."
+  },
+  {
+    "id": "w11",
+    "term": "deadline",
+    "phonetic": "/ˈdedlaɪn/",
+    "definition": "The latest time by which something must be completed.",
+    "example": "The deadline for submissions is Friday."
+  },
+  {
+    "id": "w12",
+    "term": "feedback",
+    "phonetic": "/ˈfiːdbæk/",
+    "definition": "Information about reactions to a product or performance.",
+    "example": "Constructive feedback helps you improve."
+  },
+  {
+    "id": "w13",
+    "term": "confident",
+    "phonetic": "/ˈkɒnfɪdənt/",
+    "definition": "Feeling sure about your own abilities.",
+    "example": "She felt confident before the interview."
+  },
+  {
+    "id": "w14",
+    "term": "curious",
+    "phonetic": "/ˈkjʊəriəs/",
+    "definition": "Eager to know or learn something.",
+    "example": "Kids are naturally curious about the world."
+  },
+  {
+    "id": "w15",
+    "term": "grateful",
+    "phonetic": "/ˈɡreɪtfl/",
+    "definition": "Feeling or showing thanks.",
+    "example": "I am grateful for your help."
+  },
+  {
+    "id": "w16",
+    "term": "anxious",
+    "phonetic": "/ˈæŋkʃəs/",
+    "definition": "Feeling worried or uneasy.",
+    "example": "He felt anxious before the exam."
+  },
+  {
+    "id": "w17",
+    "term": "precise",
+    "phonetic": "/prɪˈsaɪs/",
+    "definition": "Exact and accurate in detail.",
+    "example": "Please give precise instructions."
+  },
+  {
+    "id": "w18",
+    "term": "fluent",
+    "phonetic": "/ˈfluːənt/",
+    "definition": "Able to speak a language easily and accurately.",
+    "example": "She is fluent in English and Burmese."
+  },
+  {
+    "id": "w19",
+    "term": "habit",
+    "phonetic": "/ˈhæbɪt/",
+    "definition": "A regular practice that is hard to give up.",
+    "example": "Reading every night is a healthy habit."
+  },
+  {
+    "id": "w20",
+    "term": "challenge",
+    "phonetic": "/ˈtʃælɪndʒ/",
+    "definition": "A difficult task that tests ability or determination.",
+    "example": "Learning pronunciation is a fun challenge."
+  },
+  {
+    "id": "w21",
+    "term": "opportunity",
+    "phonetic": "/ˌɒpəˈtjuːnəti/",
+    "definition": "A chance for progress or advancement.",
+    "example": "This internship is a great opportunity."
+  },
+  {
+    "id": "w22",
+    "term": "perspective",
+    "phonetic": "/pəˈspektɪv/",
+    "definition": "A particular way of viewing something.",
+    "example": "Travel gives you a new perspective."
+  },
+  {
+    "id": "w23",
+    "term": "commitment",
+    "phonetic": "/kəˈmɪtmənt/",
+    "definition": "A promise or firm decision to do something.",
+    "example": "Success requires commitment and practice."
+  },
+  {
+    "id": "w24",
+    "term": "efficient",
+    "phonetic": "/ɪˈfɪʃnt/",
+    "definition": "Achieving maximum productivity with minimum wasted effort.",
+    "example": "An efficient workflow saves hours each week."
+  },
+  {
+    "id": "w25",
+    "term": "vocabulary",
+    "phonetic": "/vəˈkæbjələri/",
+    "definition": "The body of words used in a particular language.",
+    "example": "Games help expand your vocabulary."
+  },
+  {
+    "id": "w26",
+    "term": "pronunciation",
+    "phonetic": "/prəˌnʌnsiˈeɪʃn/",
+    "definition": "The way in which a word is spoken.",
+    "example": "Good pronunciation builds speaking confidence."
+  },
+  {
+    "id": "w27",
+    "term": "idiom",
+    "phonetic": "/ˈɪdiəm/",
+    "definition": "A phrase with a meaning different from the literal words.",
+    "example": "Break a leg is a common theater idiom."
+  },
+  {
+    "id": "w28",
+    "term": "motivate",
+    "phonetic": "/ˈməʊtɪveɪt/",
+    "definition": "To give someone a reason or enthusiasm to do something.",
+    "example": "Good teachers motivate students to keep practicing."
+  },
+  {
+    "id": "w29",
+    "term": "clarify",
+    "phonetic": "/ˈklærɪfaɪ/",
+    "definition": "To make something clearer or easier to understand.",
+    "example": "Can you clarify what you mean by that?"
+  },
+  {
+    "id": "w30",
+    "term": "accurate",
+    "phonetic": "/ˈækjərət/",
+    "definition": "Correct and free from mistakes.",
+    "example": "An accurate score helps you know what to improve."
+  },
+  {
+    "id": "w31",
+    "term": "fluency",
+    "phonetic": "/ˈfluːənsi/",
+    "definition": "The ability to speak or write smoothly and easily.",
+    "example": "Daily practice improves speaking fluency."
+  },
+  {
+    "id": "w32",
+    "term": "context",
+    "phonetic": "/ˈkɒntekst/",
+    "definition": "The situation that helps explain the meaning of words.",
+    "example": "Idioms are easier to learn in context."
+  },
+  {
+    "id": "w33",
+    "term": "concise",
+    "phonetic": "/kənˈsaɪs/",
+    "definition": "Giving a lot of information clearly in a few words.",
+    "example": "Please write a concise summary of the article."
+  },
+  {
+    "id": "w34",
+    "term": "reliable",
+    "phonetic": "/rɪˈlaɪəbl/",
+    "definition": "Able to be trusted or depended on.",
+    "example": "She is a reliable teammate on every project."
+  },
+  {
+    "id": "w35",
+    "term": "flexible",
+    "phonetic": "/ˈfleksəbl/",
+    "definition": "Able to change or adapt easily to new conditions.",
+    "example": "Our schedule is flexible this week."
+  },
+  {
+    "id": "w36",
+    "term": "ambitious",
+    "phonetic": "/æmˈbɪʃəs/",
+    "definition": "Having a strong desire to succeed or achieve something.",
+    "example": "He set an ambitious goal for the year."
+  },
+  {
+    "id": "w37",
+    "term": "patience",
+    "phonetic": "/ˈpeɪʃns/",
+    "definition": "The ability to stay calm while waiting or dealing with problems.",
+    "example": "Learning a language takes patience."
+  },
+  {
+    "id": "w38",
+    "term": "encourage",
+    "phonetic": "/ɪnˈkʌrɪdʒ/",
+    "definition": "To give someone support or confidence.",
+    "example": "Teachers should encourage students to speak up."
+  },
+  {
+    "id": "w39",
+    "term": "improve",
+    "phonetic": "/ɪmˈpruːv/",
+    "definition": "To make or become better.",
+    "example": "Daily practice will improve your speaking."
+  },
+  {
+    "id": "w40",
+    "term": "analyze",
+    "phonetic": "/ˈænəlaɪz/",
+    "definition": "To examine something carefully to understand it.",
+    "example": "Let's analyze the mistake and learn from it."
+  },
+  {
+    "id": "w41",
+    "term": "summarize",
+    "phonetic": "/ˈsʌməraɪz/",
+    "definition": "To give a short statement of the main points.",
+    "example": "Can you summarize the story in two sentences?"
+  },
+  {
+    "id": "w42",
+    "term": "appreciate",
+    "phonetic": "/əˈpriːʃieɪt/",
+    "definition": "To recognize the value of something or someone.",
+    "example": "I appreciate your honest feedback."
+  },
+  {
+    "id": "w43",
+    "term": "consider",
+    "phonetic": "/kənˈsɪdə/",
+    "definition": "To think carefully about something before deciding.",
+    "example": "Please consider all options before you choose."
+  },
+  {
+    "id": "w44",
+    "term": "decision",
+    "phonetic": "/dɪˈsɪʒn/",
+    "definition": "A choice made after thinking.",
+    "example": "Changing jobs was a big decision."
+  },
+  {
+    "id": "w45",
+    "term": "priority",
+    "phonetic": "/praɪˈɒrəti/",
+    "definition": "Something that is more important than other things.",
+    "example": "Sleep should be a priority during exams."
+  },
+  {
+    "id": "w46",
+    "term": "strategy",
+    "phonetic": "/ˈstrætədʒi/",
+    "definition": "A plan designed to achieve a long-term goal.",
+    "example": "We need a clear study strategy."
+  },
+  {
+    "id": "w47",
+    "term": "progress",
+    "phonetic": "/ˈprəʊɡres/",
+    "definition": "Forward movement toward a goal.",
+    "example": "You can already see progress in your fluency."
+  },
+  {
+    "id": "w48",
+    "term": "distraction",
+    "phonetic": "/dɪˈstrækʃn/",
+    "definition": "Something that takes your attention away.",
+    "example": "Put your phone away to avoid distraction."
+  },
+  {
+    "id": "w49",
+    "term": "focus",
+    "phonetic": "/ˈfəʊkəs/",
+    "definition": "The center of attention or activity.",
+    "example": "Keep your focus on clear pronunciation."
+  },
+  {
+    "id": "w50",
+    "term": "confidence",
+    "phonetic": "/ˈkɒnfɪdəns/",
+    "definition": "A feeling of trust in your own abilities.",
+    "example": "Speaking practice builds confidence."
+  },
+  {
+    "id": "w51",
+    "term": "hesitate",
+    "phonetic": "/ˈhezɪteɪt/",
+    "definition": "To pause before doing something because of uncertainty.",
+    "example": "Don't hesitate to ask questions in class."
+  },
+  {
+    "id": "w52",
+    "term": "express",
+    "phonetic": "/ɪkˈspres/",
+    "definition": "To show a feeling or idea in words or actions.",
+    "example": "It's hard to express how grateful I am."
+  },
+  {
+    "id": "w53",
+    "term": "conversation",
+    "phonetic": "/ˌkɒnvəˈseɪʃn/",
+    "definition": "An informal talk between two or more people.",
+    "example": "Start a conversation with a simple question."
+  },
+  {
+    "id": "w54",
+    "term": "interrupt",
+    "phonetic": "/ˌɪntəˈrʌpt/",
+    "definition": "To stop someone while they are speaking.",
+    "example": "Please don't interrupt until she finishes."
+  },
+  {
+    "id": "w55",
+    "term": "polite",
+    "phonetic": "/pəˈlaɪt/",
+    "definition": "Having good manners; respectful and considerate.",
+    "example": "A polite tone makes requests easier to accept."
+  },
+  {
+    "id": "w56",
+    "term": "sincere",
+    "phonetic": "/sɪnˈsɪə/",
+    "definition": "Honest and genuine in feeling or intention.",
+    "example": "She gave a sincere apology."
+  },
+  {
+    "id": "w57",
+    "term": "curiosity",
+    "phonetic": "/ˌkjʊəriˈɒsəti/",
+    "definition": "A strong desire to know or learn something.",
+    "example": "Curiosity helps learners explore new words."
+  },
+  {
+    "id": "w58",
+    "term": "discipline",
+    "phonetic": "/ˈdɪsəplɪn/",
+    "definition": "Training yourself to control behavior and stay consistent.",
+    "example": "Discipline matters more than motivation alone."
+  },
+  {
+    "id": "w59",
+    "term": "consistent",
+    "phonetic": "/kənˈsɪstənt/",
+    "definition": "Acting the same way over time; steady.",
+    "example": "Consistent practice beats long irregular sessions."
+  },
+  {
+    "id": "w60",
+    "term": "memorable",
+    "phonetic": "/ˈmemərəbl/",
+    "definition": "Worth remembering; easy to remember.",
+    "example": "A good example makes an idiom more memorable."
+  },
+  {
+    "id": "w61",
+    "term": "emphasize",
+    "phonetic": "/ˈemfəsaɪz/",
+    "definition": "To give special importance to something.",
+    "example": "Teachers often emphasize listening skills."
+  },
+  {
+    "id": "w62",
+    "term": "interpret",
+    "phonetic": "/ɪnˈtɜːprɪt/",
+    "definition": "To explain the meaning of something.",
+    "example": "Context helps you interpret unfamiliar phrases."
+  }
+]
