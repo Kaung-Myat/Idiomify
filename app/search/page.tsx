@@ -33,55 +33,61 @@ export default function SearchPage() {
     addRecent(item);
     recordSearch();
   }
+
   return (
-    <div className="mx-auto max-w-3xl space-y-6">
-      <header>
-        <h1 className="font-[family-name:var(--font-display)] text-4xl text-[var(--foam)]">
+    <div className="mx-auto max-w-3xl space-y-5 md:space-y-6">
+      <header className="md:pt-0">
+        <h1 className="font-[family-name:var(--font-display)] text-[1.75rem] leading-tight tracking-tight text-[var(--foam)] md:text-4xl">
           {t.search.title}
         </h1>
-        <p className="mt-2 text-[var(--muted)]">{t.search.subtitle}</p>
+        <p className="mt-1.5 text-sm leading-relaxed text-[var(--muted)] md:mt-2 md:text-base">
+          {t.search.subtitle}
+        </p>
       </header>
 
       <button
         type="button"
         onClick={openDialog}
-        className="flex w-full items-center gap-3 rounded-2xl border border-[var(--line)] bg-[var(--surface)] px-4 py-3.5 text-left transition hover:border-[var(--accent)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
+        className="flex min-h-[3.25rem] w-full items-center gap-3 rounded-2xl border border-[var(--line)] bg-[var(--surface)] px-4 py-3.5 text-left shadow-[0_4px_16px_color-mix(in_oklab,var(--foam)_6%,transparent)] transition active:scale-[0.99] hover:border-[var(--accent)]/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
       >
-        <IconSearch className="h-5 w-5 shrink-0 text-[var(--muted)]" />
-        <span className="flex-1 text-[var(--muted)]">
-          {selected?.term || t.search.placeholder}
+        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-[color-mix(in_oklab,var(--accent)_14%,transparent)] text-[var(--accent)]">
+          <IconSearch className="h-5 w-5" />
         </span>
-        <span className="rounded-lg border border-[var(--line)] px-2.5 py-1 text-xs text-[var(--muted)]">
-          {t.search.openSearch}
+        <span className="min-w-0 flex-1 truncate text-[15px] text-[var(--muted)]">
+          {selected?.term || t.search.placeholder}
         </span>
       </button>
 
       {selected ? (
         <DefinitionCard item={selected} />
       ) : recents.length > 0 ? (
-        <section className="space-y-3">
-          <h2 className="text-xs uppercase tracking-[0.14em] text-[var(--accent)]">
+        <section className="space-y-2.5">
+          <h2 className="px-0.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
             {t.search.recents}
           </h2>
-          <div className="grid gap-3">
-            {recents.slice(0, 4).map((item) => (
+          <div className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)] shadow-[0_4px_16px_color-mix(in_oklab,var(--foam)_5%,transparent)]">
+            {recents.slice(0, 6).map((item, index) => (
               <button
                 key={`${item.kind}-${item.id}`}
                 type="button"
                 onClick={() => handleSelect(item)}
-                className="rounded-2xl border border-[var(--line)] bg-[var(--surface)] px-4 py-3 text-left transition hover:border-[var(--accent)]/40"
+                className={`flex w-full flex-col items-start gap-0.5 px-4 py-3.5 text-left transition active:bg-[var(--hover-fill)] hover:bg-[var(--hover-fill)] ${
+                  index > 0 ? "border-t border-[var(--line)]" : ""
+                }`}
               >
-                <p className="text-[10px] uppercase tracking-[0.12em] text-[var(--accent)]">
-                  {item.kind === "idiom"
-                    ? item.category
-                      ? categoryLabel(t, item.category)
-                      : t.common.idiom
-                    : t.common.word}
+                <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[var(--accent)]">
+                  {item.source === "dictionary"
+                    ? t.search.sourceDictionary
+                    : item.kind === "idiom"
+                      ? item.category
+                        ? categoryLabel(t, item.category)
+                        : t.common.idiom
+                      : t.common.word}
                 </p>
-                <p className="mt-1 font-[family-name:var(--font-display)] text-xl text-[var(--foam)]">
+                <p className="font-[family-name:var(--font-display)] text-lg text-[var(--foam)]">
                   {item.term}
                 </p>
-                <p className="mt-1 line-clamp-1 text-sm text-[var(--muted)]">
+                <p className="line-clamp-1 text-sm text-[var(--muted)]">
                   {item.definition}
                 </p>
               </button>

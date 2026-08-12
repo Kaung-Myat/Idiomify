@@ -76,7 +76,7 @@ export function LocaleSwitcher({ variant = "inline" }: Props) {
         title={current.label}
         className={
           compact
-            ? "inline-flex h-9 min-w-9 items-center justify-center gap-1 rounded-full border border-[var(--accent)] bg-[var(--surface)] px-2.5 text-xs font-bold tracking-wide text-[var(--accent)] transition hover:bg-[var(--hover-fill)] active:scale-[0.98]"
+            ? "inline-flex h-10 min-w-10 items-center justify-center gap-1 rounded-full border border-[var(--accent)] bg-[var(--surface)] px-2.5 text-xs font-bold tracking-wide text-[var(--accent)] transition active:scale-95 hover:bg-[var(--hover-fill)]"
             : "inline-flex items-center gap-2 rounded-full border border-[var(--accent)] bg-[var(--surface)] px-4 py-2.5 text-sm font-semibold text-[var(--foam)] shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition hover:bg-[var(--hover-fill)] active:scale-[0.98]"
         }
       >

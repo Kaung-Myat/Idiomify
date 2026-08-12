@@ -64,7 +64,7 @@ export function UserMenu({
     return (
       <Link
         href="/settings"
-        className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--line)] bg-[color-mix(in_oklab,var(--accent)_18%,transparent)] text-xs font-semibold text-[var(--accent)]"
+        className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--line)] bg-[color-mix(in_oklab,var(--accent)_18%,transparent)] text-xs font-semibold text-[var(--accent)] active:scale-95"
         title={t.settings.title}
         aria-label={t.settings.title}
       >

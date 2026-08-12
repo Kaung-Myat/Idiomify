@@ -39,6 +39,8 @@ NEXT_PUBLIC_PYTHON_SCORE_URL="http://localhost:8000/score"
 
 Search flow: curated library first, then Free Dictionary for extra definitions.
 
+## Python pronunciation server
+
 ```bash
 cd python_server
 python -m venv .venv
@@ -67,7 +69,23 @@ Scoring uses Faster-Whisper speech-to-text + text similarity (not phoneme diagno
 
 See [prd.md](prd.md) for full requirements.
 
-## Localization
+## PWA
+
+Production builds register a service worker via [Serwist](https://serwist.pages.dev/):
+
+```bash
+npm run build && npm start
+# or
+npm run start:prod
+```
+
+- Manifest: `/manifest.webmanifest`
+- Offline fallback: `/offline`
+- Installable icons: `public/icons/`
+
+Service worker is **disabled in `next dev`** (Turbopack). Use a production build to test install / offline.
+
+**Important:** `next dev` rewrites `.next/` in a way that breaks `npm start` (`routesManifest.dataRoutes is not iterable`). Always run a fresh `npm run build` before `npm start` (or use `npm run start:prod`). Don’t keep `npm run dev` running against the same `.next` folder you plan to start.
 
 UI strings live in:
 

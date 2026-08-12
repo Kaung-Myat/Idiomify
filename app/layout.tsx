@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Noto_Sans_Myanmar, Roboto } from "next/font/google";
 import { AppShell } from "@/components/layout/AppShell";
 import { LocaleHtml } from "@/components/layout/LocaleHtml";
@@ -19,17 +19,41 @@ const myanmar = Noto_Sans_Myanmar({
 });
 
 export const metadata: Metadata = {
-  title: "Idiomify — Pronunciation, Idioms & Vocabulary",
+  applicationName: "Idiomify",
+  title: {
+    default: "Idiomify — Pronunciation, Idioms & Vocabulary",
+    template: "%s · Idiomify",
+  },
   description:
     "Master pronunciation, idioms, and vocabulary through gamified AI learning.",
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Idiomify",
+  },
+  formatDetection: {
+    telephone: false,
+  },
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
       { url: "/favicon.ico" },
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#e8f3f1" },
+    { media: "(prefers-color-scheme: dark)", color: "#071b1f" },
+  ],
 };
 
 const themeInitScript = `

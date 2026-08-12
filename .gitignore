@@ -65,7 +65,8 @@ python_server/__pycache__/
 .mypy_cache/
 .ruff_cache/
 
-# os / temp
-*.tmp
-*.temp
-.cache/
+# Serwist / service worker build output
+public/sw.js
+public/sw.js.map
+public/swe-worker*
+public/sw*

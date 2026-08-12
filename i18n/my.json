@@ -30,7 +30,7 @@
   },
   "home": {
     "headline": "စကားစုများကို ရှင်းလင်းစွာ ပြောပါ။ မှတ်ဉာဏ်ထဲတွင် ကျန်ရှိစေသော စကားလုံးများကို သင်ယူပါ။",
-    "subtitle": "ဝေါဟာရရှာဖွေပါ၊ အသံထွက်ကို တိုက်ရိုက်အမှတ်ဖြင့် လေ့ကျင့်ပါ၊ Easy/Medium/Hard ဂိမ်းများဖြင့် အဆင့်တက်ပါ။",
+    "subtitle": "စကားစုရှာပါ၊ အသံထွက်ကို တိုက်ရိုက်အမှတ်ဖြင့် လေ့ကျင့်ပါ၊ ဂိမ်းများဖြင့် အဆင့်တက်ပါ။",
     "getStarted": "စတင်မည်",
     "featureSearch": "စကားလုံး/စကားစု ရှာဖွေခြင်း",
     "featureSpeak": "တိုက်ရိုက်အသံထွက် အမှတ်ပေးခြင်း",
@@ -107,6 +107,19 @@
       }
     }
   },
+  "pwa": {
+    "installTitle": "Idiomify ကို Install လုပ်မည်",
+    "installBody": "Home screen သို့ ထည့်ပြီး ပိုမြန်စွာ ဖွင့်ပါ — full-screen app ပုံစံဖြင့် လေ့ကျင့်နိုင်ပါသည်။",
+    "installDevBody": "Idiomify ကို app အဖြစ် ထည့်သုံးနိုင်ပါသည်။ Chrome တွင် Install ခလုတ်သည် production build မှာ ပေါ်ပါသည်။",
+    "installHint": "အကြံပြုချက်: npm run build && npm start ပြီး Chrome ဖြင့် ဖွင့်မှ native Install ခလုတ် ရပါမည်။",
+    "installIosBody": "Safari မှ Idiomify ကို iPhone/iPad home screen သို့ ထည့်ပြီး native app ပုံစံသုံးပါ။",
+    "installButton": "App အဖြစ် ထည့်မည်",
+    "installing": "ထည့်နေသည်…",
+    "notNow": "ယခုမလုပ်ပါ",
+    "iosStepShare": "Safari တွင် Share ခလုတ်ကို နှိပ်ပါ။",
+    "iosStepAdd": "“Add to Home Screen” ကို ရွေးပါ။",
+    "iosStepConfirm": "Add ကိုနှိပ်ပြီး ပြီးဆုံးပါ။"
+  },
   "search": {
     "title": "ရှာဖွေရန်",
     "subtitle": "စကားလုံးနှင့် စကားစုများ၏ အဓိပ္ပာယ်နှင့် ဥပမာဝါကျများကို ရှာဖွေပါ။",
@@ -162,7 +175,7 @@
     "startSpeaking": "စကားပြောစတင်မည်",
     "tapToSpeak": "မိုက်ခ်ကို နှိပ်ပြီး ပြောပါ",
     "processing": "အမှတ်တွက်နေသည်…",
-    "stop": "ရပ်မည်",
+    "stop": "အသံဖမ်းခြင်း ရပ်မည်",
     "demoMode": "Demo Mode",
     "listening": "နားထောင်နေသည်…",
     "matchScore": "စကားပြော ကိုက်ညီမှု အမှတ်",

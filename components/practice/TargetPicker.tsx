@@ -60,8 +60,8 @@ export function TargetPicker({ options, value, onChange }: Props) {
 
   return (
     <>
-      <div className="rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-4 sm:p-5">
-        <p className="text-xs uppercase tracking-[0.14em] text-[var(--accent)]">
+      <div className="rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-4 shadow-[0_6px_20px_color-mix(in_oklab,var(--foam)_6%,transparent)] sm:p-5">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
           {t.practice.chooseTarget}
         </p>
         <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -70,7 +70,7 @@ export function TargetPicker({ options, value, onChange }: Props) {
               {value}
             </p>
             {selected?.example ? (
-              <p className="mt-1 truncate text-sm text-[var(--muted)]">
+              <p className="mt-1 line-clamp-2 text-sm text-[var(--muted)]">
                 {selected.example}
               </p>
             ) : null}
@@ -78,7 +78,7 @@ export function TargetPicker({ options, value, onChange }: Props) {
           <Button
             type="button"
             variant="secondary"
-            className="shrink-0"
+            className="min-h-11 w-full shrink-0 sm:w-auto"
             onClick={() => setOpen(true)}
           >
             {t.practice.changeTarget}

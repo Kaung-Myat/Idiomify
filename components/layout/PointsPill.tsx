@@ -18,7 +18,7 @@ export function PointsPill() {
   return (
     <Link
       href="/badges"
-      className="inline-flex max-w-[5.5rem] items-center gap-1 truncate rounded-full border border-[var(--accent)]/35 bg-[color-mix(in_oklab,var(--accent)_14%,transparent)] px-2 py-1.5 text-xs font-bold text-[var(--accent)] transition hover:border-[var(--accent)]/60 sm:max-w-none sm:gap-1.5 sm:px-3 sm:text-sm"
+      className="inline-flex max-w-[5.75rem] items-center gap-1 truncate rounded-full border border-[var(--accent)]/35 bg-[color-mix(in_oklab,var(--accent)_14%,transparent)] px-2.5 py-2 text-xs font-bold text-[var(--accent)] transition active:scale-95 hover:border-[var(--accent)]/60 sm:max-w-none sm:gap-1.5 sm:px-3 sm:py-1.5 sm:text-sm"
       title={t.badges.title}
     >
       <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent)]" aria-hidden />

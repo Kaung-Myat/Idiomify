@@ -374,15 +374,15 @@ export function SpeakPanel({
   const isProcessing = pythonBusy && !recording;
 
   return (
-    <div className="rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-5 sm:p-6">
-      <p className="text-xs uppercase tracking-[0.14em] text-[var(--accent)]">
+    <div className="rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-4 shadow-[0_6px_20px_color-mix(in_oklab,var(--foam)_6%,transparent)] sm:p-6">
+      <p className="text-center text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
         {t.speak.targetPhrase}
       </p>
-      <p className="mt-2 text-center font-[family-name:var(--font-display)] text-2xl text-[var(--foam)] sm:text-3xl">
+      <p className="mt-2 text-center font-[family-name:var(--font-display)] text-[1.65rem] leading-snug text-[var(--foam)] sm:text-3xl">
         {target}
       </p>
 
-      <div className="mt-8">
+      <div className="mt-7 sm:mt-8">
         <MicVisualizer
           active={isLive}
           processing={isProcessing}
@@ -395,10 +395,11 @@ export function SpeakPanel({
         />
       </div>
 
-      <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
+      <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center">
         <Button
           type="button"
           variant="secondary"
+          className="min-h-11 w-full sm:w-auto"
           onClick={() => speakText(target)}
           disabled={disabled || pythonBusy || isLive}
         >
@@ -408,6 +409,7 @@ export function SpeakPanel({
           <Button
             type="button"
             variant="ghost"
+            className="min-h-11 w-full sm:w-auto"
             disabled={disabled || pythonBusy || isLive}
             onClick={() => applyScore(target, true)}
           >
@@ -430,9 +432,9 @@ export function SpeakPanel({
 
       {accuracy !== null ? (
         <div className="mt-6 space-y-4 border-t border-[var(--line)] pt-6">
-          <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+          <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-center sm:text-left">
             <div
-              className="grid h-24 w-24 place-items-center rounded-full border-4 border-[var(--accent)] font-[family-name:var(--font-display)] text-2xl text-[var(--foam)]"
+              className="grid h-24 w-24 shrink-0 place-items-center rounded-full border-4 border-[var(--accent)] font-[family-name:var(--font-display)] text-2xl text-[var(--foam)]"
               aria-label={fmt(t.speak.matchAccuracy, { accuracy })}
             >
               {accuracy}%

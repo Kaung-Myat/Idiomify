@@ -21,7 +21,7 @@ export function BadgeUnlockToast() {
   const label = badgeLabel(t, newlyUnlocked[0]);
 
   return (
-    <div className="fixed bottom-[calc(5.75rem+env(safe-area-inset-bottom))] right-4 z-50 max-w-sm animate-[rise_0.35s_ease-out] rounded-2xl border border-[var(--accent)]/40 bg-[var(--surface)] p-4 shadow-2xl md:bottom-6 md:right-6">
+    <div className="fixed bottom-[calc(6.5rem+env(safe-area-inset-bottom))] right-3 z-50 max-w-[min(20rem,calc(100vw-1.5rem))] animate-[rise_0.35s_ease-out] rounded-2xl border border-[var(--accent)]/40 bg-[var(--surface)] p-4 shadow-2xl md:bottom-6 md:right-6 md:max-w-sm">
       <p className="text-xs uppercase tracking-[0.14em] text-[var(--accent)]">
         {t.badges.unlockToast}
       </p>

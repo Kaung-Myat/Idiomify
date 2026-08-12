@@ -67,6 +67,7 @@ html[data-theme="light"] {
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 html,
@@ -85,6 +86,8 @@ body {
     radial-gradient(900px 500px at 100% 0%, var(--bg-glow-b), transparent 50%),
     var(--bg-base);
   background-attachment: fixed;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 /* Myanmar script needs a bit more vertical room between lines */
@@ -305,4 +308,39 @@ a {
 .audio-wave-bar {
   transform-origin: bottom center;
   animation: audio-wave-bar 0.7s ease-in-out infinite;
+}
+
+/* Landing hero atmosphere */
+.landing-hero-mesh {
+  background:
+    radial-gradient(ellipse 80% 55% at 50% -10%, color-mix(in oklab, var(--accent) 28%, transparent), transparent 58%),
+    radial-gradient(ellipse 55% 45% at 100% 40%, color-mix(in oklab, #38b2ac 18%, transparent), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 0% 70%, color-mix(in oklab, var(--accent) 12%, transparent), transparent 50%);
+}
+
+.landing-hero-grid {
+  background-image:
+    linear-gradient(color-mix(in oklab, var(--foam) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in oklab, var(--foam) 6%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 75%);
+}
+
+.landing-wave {
+  animation: landing-wave-drift 14s ease-in-out infinite alternate;
+}
+
+@keyframes landing-wave-drift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-3%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-wave {
+    animation: none !important;
+  }
 }

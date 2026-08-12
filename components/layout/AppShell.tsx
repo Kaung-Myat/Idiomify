@@ -14,6 +14,7 @@ import { IconSidebarToggle } from "@/components/layout/NavIcons";
 import { PointsPill } from "@/components/layout/PointsPill";
 import { UserMenu } from "@/components/layout/UserMenu";
 import { BadgeUnlockToast } from "@/components/badges/BadgeUnlockToast";
+import { PwaInstallListener } from "@/components/pwa/PwaInstallListener";
 import { ProgressSync } from "@/components/providers/ProgressSync";
 import { useOnboardingStore } from "@/lib/onboarding-store";
 import { useT } from "@/lib/locale-store";
@@ -50,6 +51,7 @@ export function AppShell({ children }: { children: ReactNode }) {
   const { desktopOpen, openDesktop, closeDesktop } = useConsoleSidebar();
 
   const isLanding = pathname === "/";
+  const isOffline = pathname === "/offline";
   const inConsole = isConsoleRoute(pathname);
   const isAuthed = authState.status === "authed";
   const authLoading = authState.status === "loading";
@@ -84,21 +86,23 @@ export function AppShell({ children }: { children: ReactNode }) {
     nextUrl,
   ]);
 
-  if (isLanding || isAuthRoute(pathname)) {
+  if (isLanding || isAuthRoute(pathname) || isOffline) {
     return (
       <div className="min-h-screen">
         <ProgressSync />
-        <header className="absolute inset-x-0 top-0 z-40">
-          <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4">
-            <BrandLogo href="/" size="sm" />
-            <div className="flex items-center gap-2">
-              <LocaleSwitcher />
-              {!isAuthRoute(pathname) ? (
-                <UserMenu compact={false} loginNext="/dashboard" />
-              ) : null}
+        {!isOffline ? (
+          <header className="absolute inset-x-0 top-0 z-40">
+            <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4">
+              <BrandLogo href="/" size="sm" />
+              <div className="flex items-center gap-2">
+                <LocaleSwitcher variant="floating" />
+                {!isAuthRoute(pathname) ? (
+                  <UserMenu compact={false} loginNext="/dashboard" />
+                ) : null}
+              </div>
             </div>
-          </div>
-        </header>
+          </header>
+        ) : null}
         <main
           className={
             isAuthRoute(pathname)
@@ -131,13 +135,13 @@ export function AppShell({ children }: { children: ReactNode }) {
       <MobileBottomNav />
 
       {/* Mobile app bar */}
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-[var(--line)] bg-[var(--header-bg)] pt-[env(safe-area-inset-top)] backdrop-blur-xl md:hidden">
-        <div className="flex h-14 items-center gap-2 px-3">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-[var(--line)] bg-[color-mix(in_oklab,var(--header-bg)_94%,transparent)] pt-[env(safe-area-inset-top)] shadow-[0_1px_0_color-mix(in_oklab,var(--foam)_4%,transparent)] backdrop-blur-2xl md:hidden">
+        <div className="flex h-[3.25rem] items-center gap-2 px-3.5">
           <div className="min-w-0 flex-1 overflow-hidden">
             <BrandLogo
               href="/dashboard"
               size="sm"
-              className="gap-1.5 [&>span]:truncate [&>span]:text-base"
+              className="gap-2 [&>img]:h-7 [&>img]:w-7 [&>span]:truncate [&>span]:text-[15px]"
             />
           </div>
           <div className="flex shrink-0 items-center gap-1.5">
@@ -173,12 +177,13 @@ export function AppShell({ children }: { children: ReactNode }) {
           desktopOpen ? "md:pl-[17.5rem]" : "md:pl-0"
         }`}
       >
-        <main className="app-scroll min-h-0 flex-1 overflow-x-auto overflow-y-auto px-4 pb-[calc(5.5rem+env(safe-area-inset-bottom))] pt-[calc(3.5rem+env(safe-area-inset-top))] sm:px-6 md:px-8 md:pb-8 md:pt-8">
+        <main className="app-scroll min-h-0 flex-1 overflow-x-hidden overflow-y-auto overscroll-y-contain px-4 pb-[calc(6.25rem+env(safe-area-inset-bottom))] pt-[calc(3.25rem+env(safe-area-inset-top)+0.75rem)] sm:px-6 md:overflow-x-auto md:px-8 md:pb-8 md:pt-8">
           {children}
         </main>
       </div>
 
       <BadgeUnlockToast />
+      <PwaInstallListener />
     </div>
   );
 }

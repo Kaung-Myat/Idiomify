@@ -64,12 +64,14 @@ function PracticeInner() {
   }, [targets, paramTarget, target]);
 
   return (
-    <div className="mx-auto max-w-2xl space-y-6">
+    <div className="mx-auto max-w-2xl space-y-5 md:space-y-6">
       <header>
-        <h1 className="font-[family-name:var(--font-display)] text-4xl text-[var(--foam)]">
+        <h1 className="font-[family-name:var(--font-display)] text-[1.75rem] leading-tight tracking-tight text-[var(--foam)] md:text-4xl">
           {t.practice.title}
         </h1>
-        <p className="mt-2 text-[var(--muted)]">{t.practice.subtitle}</p>
+        <p className="mt-1.5 text-sm leading-relaxed text-[var(--muted)] md:mt-2 md:text-base">
+          {t.practice.subtitle}
+        </p>
       </header>
 
       <TargetPicker

@@ -4,10 +4,14 @@ import { updateSession } from "@/lib/supabase/middleware";
 const PUBLIC_PREFIXES = [
   "/",
   "/auth",
+  "/offline",
+  "/manifest.webmanifest",
+  "/sw.js",
   "/favicon.ico",
   "/favicon.svg",
   "/logo-mark.svg",
   "/logo.png",
+  "/icons",
   "/robots.txt",
 ];
 

@@ -6,6 +6,7 @@ import { getUserDisplayName, useAuth } from "@/lib/auth/useAuth";
 import { useLearnerStore } from "@/lib/store";
 import { useT } from "@/lib/locale-store";
 import { NavIcon, type NavIconKey } from "@/components/layout/NavIcons";
+import { InstallAppDialog } from "@/components/pwa/InstallAppDialog";
 
 const modules: {
   key: Exclude<NavIconKey, "console" | "settings">;
@@ -127,6 +128,8 @@ export default function DashboardPage() {
           })}
         </div>
       </section>
+
+      <InstallAppDialog />
     </div>
   );
 }

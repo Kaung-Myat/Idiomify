@@ -113,12 +113,12 @@ export function SearchDialog({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-start justify-center px-3 pt-[12vh] sm:px-4"
+      className="fixed inset-0 z-[60] flex items-end justify-center md:items-start md:px-4 md:pt-[12vh]"
       role="presentation"
     >
       <button
         type="button"
-        className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"
+        className="absolute inset-0 bg-black/55 backdrop-blur-[2px] animate-[rise_0.2s_ease-out]"
         aria-label={t.common.close}
         onClick={onClose}
       />
@@ -127,10 +127,17 @@ export function SearchDialog({
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
-        className="relative z-10 flex max-h-[76vh] w-full max-w-xl flex-col overflow-hidden rounded-3xl border border-[var(--line)] bg-[var(--surface)] shadow-2xl"
+        className="relative z-10 flex h-[min(92dvh,100%)] w-full max-w-xl flex-col overflow-hidden rounded-t-[1.75rem] border border-[var(--line)] bg-[var(--surface)] shadow-2xl animate-[rise_0.28s_ease-out] md:h-auto md:max-h-[76vh] md:rounded-3xl pb-[env(safe-area-inset-bottom)]"
       >
-        <div className="flex items-center gap-3 border-b border-[var(--line)] px-4 py-3">
-          <IconSearch className="h-5 w-5 shrink-0 text-[var(--muted)]" />
+        {/* Mobile sheet handle */}
+        <div className="flex justify-center pt-2.5 md:hidden" aria-hidden>
+          <span className="h-1 w-10 rounded-full bg-[color-mix(in_oklab,var(--foam)_22%,transparent)]" />
+        </div>
+
+        <div className="flex items-center gap-2 border-b border-[var(--line)] px-3 py-2.5 sm:px-4 sm:py-3">
+          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-[color-mix(in_oklab,var(--accent)_12%,transparent)] text-[var(--accent)]">
+            <IconSearch className="h-5 w-5" />
+          </span>
           <label className="sr-only" htmlFor="search-dialog-input">
             {t.search.title}
           </label>
@@ -141,13 +148,14 @@ export function SearchDialog({
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={t.search.placeholder}
-            className="min-w-0 flex-1 bg-transparent text-base text-[var(--foam)] outline-none placeholder:text-[var(--muted)]"
+            className="min-h-11 min-w-0 flex-1 bg-transparent text-[16px] text-[var(--foam)] outline-none placeholder:text-[var(--muted)]"
             autoComplete="off"
+            enterKeyHint="search"
           />
           <button
             type="button"
             onClick={onClose}
-            className="rounded-lg px-2 py-1 text-sm text-[var(--muted)] hover:bg-[var(--hover-fill)] hover:text-[var(--foam)]"
+            className="min-h-11 shrink-0 rounded-xl px-3 text-sm font-medium text-[var(--muted)] active:bg-[var(--hover-fill)] hover:text-[var(--foam)]"
           >
             {t.common.close}
           </button>
@@ -157,18 +165,18 @@ export function SearchDialog({
           {t.search.title}
         </h2>
 
-        <div className="app-scroll min-h-0 flex-1 overflow-y-auto">
+        <div className="app-scroll min-h-0 flex-1 overflow-y-auto overscroll-contain">
           {!trimmed ? (
-            <div className="px-2 py-2">
+            <div className="px-1 py-2 sm:px-2">
               <div className="flex items-center justify-between px-3 py-2">
-                <p className="text-xs uppercase tracking-[0.14em] text-[var(--accent)]">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
                   {t.search.recents}
                 </p>
                 {recents.length > 0 ? (
                   <button
                     type="button"
                     onClick={clearRecents}
-                    className="text-xs text-[var(--muted)] hover:text-[var(--foam)]"
+                    className="min-h-9 rounded-lg px-2 text-xs text-[var(--muted)] active:bg-[var(--hover-fill)] hover:text-[var(--foam)]"
                   >
                     {t.search.clearRecents}
                   </button>
@@ -176,7 +184,7 @@ export function SearchDialog({
               </div>
 
               {recents.length === 0 ? (
-                <p className="px-3 py-8 text-center text-sm text-[var(--muted)]">
+                <p className="px-3 py-10 text-center text-sm text-[var(--muted)]">
                   {t.search.noRecents}
                 </p>
               ) : (
@@ -186,9 +194,9 @@ export function SearchDialog({
                       <button
                         type="button"
                         onClick={() => pick(item)}
-                        className="flex w-full flex-col items-start gap-0.5 rounded-xl px-3 py-3 text-left hover:bg-[var(--hover-fill)]"
+                        className="flex min-h-[3.5rem] w-full flex-col items-start gap-0.5 rounded-xl px-3 py-3.5 text-left active:bg-[var(--hover-fill)] hover:bg-[var(--hover-fill)]"
                       >
-                        <span className="text-[10px] uppercase tracking-[0.12em] text-[var(--accent)]">
+                        <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[var(--accent)]">
                           {sourceLabel(item, t)}
                         </span>
                         <span className="font-semibold text-[var(--foam)]">
@@ -201,7 +209,7 @@ export function SearchDialog({
                       <button
                         type="button"
                         onClick={() => removeRecent(item.id, item.kind)}
-                        className="absolute right-2 top-2 rounded-md px-2 py-1 text-xs text-[var(--muted)] opacity-0 hover:bg-[var(--hover-fill)] hover:text-[var(--foam)] group-hover:opacity-100"
+                        className="absolute right-2 top-2 flex h-9 w-9 items-center justify-center rounded-full text-lg text-[var(--muted)] opacity-100 active:bg-[var(--hover-fill)] hover:text-[var(--foam)] md:opacity-0 md:group-hover:opacity-100"
                         aria-label={t.search.removeRecent}
                       >
                         ×
@@ -212,23 +220,23 @@ export function SearchDialog({
               )}
             </div>
           ) : loading && results.length === 0 ? (
-            <p className="px-4 py-10 text-center text-sm text-[var(--muted)]">
+            <p className="px-4 py-12 text-center text-sm text-[var(--muted)]">
               {t.search.searching}
             </p>
           ) : deferredQuery && !loading && results.length === 0 ? (
-            <p className="px-4 py-10 text-center text-sm text-[var(--muted)]">
+            <p className="px-4 py-12 text-center text-sm text-[var(--muted)]">
               {fmt(t.search.noMatchesDescription, { query: deferredQuery })}
             </p>
           ) : (
-            <ul className="px-2 py-2">
+            <ul className="px-1 py-2 sm:px-2">
               {results.map((item) => (
                 <li key={`${item.kind}-${item.id}-${item.source ?? "curated"}`}>
                   <button
                     type="button"
                     onClick={() => pick(item)}
-                    className="flex w-full flex-col items-start gap-0.5 rounded-xl px-3 py-3 text-left hover:bg-[var(--hover-fill)]"
+                    className="flex min-h-[3.5rem] w-full flex-col items-start gap-0.5 rounded-xl px-3 py-3.5 text-left active:bg-[var(--hover-fill)] hover:bg-[var(--hover-fill)]"
                   >
-                    <span className="text-[10px] uppercase tracking-[0.12em] text-[var(--accent)]">
+                    <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[var(--accent)]">
                       {sourceLabel(item, t)}
                     </span>
                     <span className="font-semibold text-[var(--foam)]">

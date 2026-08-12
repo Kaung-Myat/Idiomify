@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
+    "build": "next build && node scripts/ensure-routes-manifest.cjs",
+    "start": "node scripts/ensure-routes-manifest.cjs && next start",
+    "start:prod": "npm run build && next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@serwist/next": "^9.5.12",
     "@supabase/ssr": "^0.12.4",
     "@supabase/supabase-js": "^2.112.3",
     "next": "^15.5.2",
@@ -24,6 +26,7 @@
     "@types/react-dom": "^19.1.9",
     "eslint": "^9.34.0",
     "eslint-config-next": "^15.5.2",
+    "serwist": "^9.5.12",
     "tailwindcss": "^4.1.12",
     "typescript": "^5.9.2"
   }

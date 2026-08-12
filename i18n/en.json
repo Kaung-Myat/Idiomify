@@ -30,7 +30,7 @@
   },
   "home": {
     "headline": "Speak idioms clearly. Learn words that stick.",
-    "subtitle": "Search vocabulary, practice pronunciation with live match scores, and level up through Easy, Medium, and Hard games.",
+    "subtitle": "Look up phrases, practice pronunciation with live scores, and level up through games.",
     "getStarted": "Get Started",
     "featureSearch": "Search words & idioms",
     "featureSpeak": "Live pronunciation scoring",
@@ -107,6 +107,19 @@
       }
     }
   },
+  "pwa": {
+    "installTitle": "Install Idiomify",
+    "installBody": "Add Idiomify to your home screen for faster access, a full-screen app feel, and better practice on the go.",
+    "installDevBody": "Install Idiomify as an app for a full-screen experience. The install button appears in production builds when Chrome is ready.",
+    "installHint": "Tip: run npm run build && npm start, then open the site in Chrome to get the native Install button.",
+    "installIosBody": "Install Idiomify on your iPhone or iPad from Safari for a native-style home-screen app.",
+    "installButton": "Install app",
+    "installing": "Installing…",
+    "notNow": "Not now",
+    "iosStepShare": "Tap the Share button in Safari.",
+    "iosStepAdd": "Choose “Add to Home Screen”.",
+    "iosStepConfirm": "Tap Add to finish."
+  },
   "search": {
     "title": "Search",
     "subtitle": "Look up vocabulary words and idioms with definitions and examples.",
@@ -162,7 +175,7 @@
     "startSpeaking": "Start speaking",
     "tapToSpeak": "Tap the mic and speak",
     "processing": "Scoring your speech…",
-    "stop": "Stop",
+    "stop": "Stop recording",
     "demoMode": "Demo Mode",
     "listening": "Listening…",
     "matchScore": "Speech match score",

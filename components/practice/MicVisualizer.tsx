@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type MutableRefObject } from "react";
-import { IconMic } from "@/components/layout/NavIcons";
+import { IconMic, IconStop } from "@/components/layout/NavIcons";
 
 type Props = {
   active: boolean;
@@ -138,14 +138,14 @@ export function MicVisualizer({
     };
   }, [active, visualLive, externalLevelRef]);
 
-  const status = processing
+  const ariaLabel = processing
     ? processingLabel
     : active
       ? stopLabel
       : label;
 
   return (
-    <div className="flex flex-col items-center gap-5">
+    <div className="flex flex-col items-center gap-4">
       <div className="relative grid place-items-center">
         <span
           ref={ring1Ref}
@@ -165,17 +165,19 @@ export function MicVisualizer({
           onClick={onClick}
           disabled={disabled || processing}
           aria-pressed={active}
-          aria-label={status}
-          className={`relative z-10 grid h-24 w-24 place-items-center rounded-full transition-[background-color,box-shadow,transform,color] duration-300 ease-out disabled:pointer-events-none disabled:opacity-50 ${
+          aria-label={ariaLabel}
+          className={`relative z-10 grid h-[5.5rem] w-[5.5rem] place-items-center rounded-full transition-[background-color,box-shadow,transform,color,border-radius] duration-300 ease-out disabled:pointer-events-none disabled:opacity-50 sm:h-24 sm:w-24 ${
             active
-              ? "scale-[1.02] bg-red-500 text-white shadow-[0_0_0_6px_rgba(239,68,68,0.22)]"
-              : "bg-[var(--accent)] text-[var(--ink)] shadow-[0_12px_40px_rgba(245,166,35,0.35)] hover:brightness-105 active:scale-[0.98]"
+              ? "scale-[1.02] bg-[var(--danger-fg)] text-white shadow-[0_0_0_6px_color-mix(in_oklab,var(--danger-fg)_28%,transparent)]"
+              : "bg-[var(--accent)] text-[var(--ink)] shadow-[0_12px_40px_color-mix(in_oklab,var(--accent)_35%,transparent)] hover:brightness-105 active:scale-[0.97]"
           }`}
         >
           {processing ? (
             <span className="mic-spin h-8 w-8 rounded-full border-2 border-current/25 border-t-current" />
+          ) : active ? (
+            <IconStop className="h-8 w-8" aria-hidden />
           ) : (
-            <IconMic className="h-9 w-9 transition-transform duration-300" aria-hidden />
+            <IconMic className="h-9 w-9" aria-hidden />
           )}
         </button>
       </div>
@@ -200,15 +202,25 @@ export function MicVisualizer({
         ))}
       </div>
 
-      <p
-        className={`text-sm transition-colors duration-300 ${
-          active || processing
-            ? "text-[var(--accent)]"
-            : "text-[var(--muted)]"
-        }`}
-      >
-        {status}
-      </p>
+      {processing ? (
+        <p className="rounded-full border border-[var(--line)] bg-[var(--hover-fill)] px-4 py-2 text-sm text-[var(--muted)]">
+          {processingLabel}
+        </p>
+      ) : active ? (
+        <button
+          type="button"
+          onClick={onClick}
+          disabled={disabled}
+          className="inline-flex min-h-11 min-w-[8.5rem] items-center justify-center gap-2 rounded-full border border-[var(--danger-border)] bg-[var(--danger-bg)] px-5 text-sm font-semibold text-[var(--danger-fg)] shadow-sm transition active:scale-[0.98] hover:brightness-105 disabled:opacity-50"
+        >
+          <IconStop className="h-3.5 w-3.5" aria-hidden />
+          {stopLabel}
+        </button>
+      ) : (
+        <p className="max-w-[16rem] text-center text-sm text-[var(--muted)]">
+          {label}
+        </p>
+      )}
     </div>
   );
 }
