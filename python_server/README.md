@@ -6,11 +6,14 @@ This server provides an open-source pronunciation scoring endpoint using **faste
 
 ```bash
 cd python_server
-pip install -r requirements.txt
+source .venv/bin/activate   # or: python -m venv .venv && pip install -r requirements.txt
 
-# CPU (default)
-uvicorn main:app --host 0.0.0.0 --port 8000
+# Either entry works:
+uvicorn app.main:app --host 0.0.0.0 --port 8000
+# uvicorn main:app --host 0.0.0.0 --port 8000
 ```
+
+Use port **8000** so it matches the Next.js client (`NEXT_PUBLIC_PYTHON_SCORE_URL` / SpeakPanel).
 
 ## Endpoint
 
