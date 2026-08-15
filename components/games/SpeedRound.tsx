@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { GameResult } from "@/components/games/GameResult";
 import { Progress } from "@/components/ui/Progress";
 import { games } from "@/lib/content";
-import { shuffle } from "@/lib/games/utils";
+import { pickRandom } from "@/lib/games/utils";
 import { fmt } from "@/lib/i18n";
 import { useLearnerStore } from "@/lib/store";
 import { useT } from "@/lib/locale-store";
@@ -15,7 +15,7 @@ const LIVES = 3;
 
 export function SpeedRound() {
   const t = useT();
-  const questions = useMemo(() => shuffle(games.easy).slice(0, 8), []);
+  const questions = useMemo(() => pickRandom(games.easy, 8), []);
   const [index, setIndex] = useState(0);
   const [secondsLeft, setSecondsLeft] = useState(SECONDS);
   const [lives, setLives] = useState(LIVES);
@@ -100,9 +100,9 @@ export function SpeedRound() {
         subtitle={fmt(t.games.easy.speedResult, {
           correct: correctCount,
           total: questions.length,
-          points: correctCount * 10,
           streak: bestStreak,
         })}
+        points={correctCount * 10}
         onAgain={restart}
         againLabel={t.common.playAgain}
       />

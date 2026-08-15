@@ -187,6 +187,7 @@ export function DailyChallengeRound() {
   }
 
   if (finished) {
+    const pointsEarned = Math.max(10, Math.round(score / 2));
     return (
       <GameResult
         title={t.games.daily.complete}
@@ -194,6 +195,7 @@ export function DailyChallengeRound() {
           score,
           best: Math.max(todayBest, score),
         })}
+        points={pointsEarned}
         onAgain={restart}
         againLabel={t.common.playAgain}
         extra={

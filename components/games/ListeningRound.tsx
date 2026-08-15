@@ -2,8 +2,10 @@
 
 import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/Button";
+import { GameResult } from "@/components/games/GameResult";
 import { Progress } from "@/components/ui/Progress";
 import { games } from "@/lib/content";
+import { pickRandom } from "@/lib/games/utils";
 import { fmt } from "@/lib/i18n";
 import { speakText } from "@/lib/speech";
 import { useLearnerStore } from "@/lib/store";
@@ -11,7 +13,7 @@ import { useT } from "@/lib/locale-store";
 
 export function ListeningRound() {
   const t = useT();
-  const questions = useMemo(() => games.listening, []);
+  const questions = useMemo(() => pickRandom(games.listening, 6), []);
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
@@ -56,21 +58,16 @@ export function ListeningRound() {
 
   if (finished) {
     return (
-      <div className="rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-6 text-center">
-        <h2 className="font-[family-name:var(--font-display)] text-3xl text-[var(--foam)]">
-          {t.games.medium.listeningComplete}
-        </h2>
-        <p className="mt-2 text-[var(--muted)]">
-          {fmt(t.games.medium.listeningResult, {
-            correct: correctCount,
-            total: questions.length,
-            points: correctCount * 20,
-          })}
-        </p>
-        <Button type="button" className="mt-6" onClick={restart}>
-          {t.common.playAgain}
-        </Button>
-      </div>
+      <GameResult
+        title={t.games.medium.listeningComplete}
+        subtitle={fmt(t.games.medium.listeningResult, {
+          correct: correctCount,
+          total: questions.length,
+        })}
+        points={correctCount * 20}
+        onAgain={restart}
+        againLabel={t.common.playAgain}
+      />
     );
   }
 

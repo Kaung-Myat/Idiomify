@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { GameResult } from "@/components/games/GameResult";
 import { Progress } from "@/components/ui/Progress";
 import { games } from "@/lib/content";
-import { normalizeAnswer, shuffle } from "@/lib/games/utils";
+import { normalizeAnswer, pickRandom } from "@/lib/games/utils";
 import { fmt } from "@/lib/i18n";
 import { speakText } from "@/lib/speech";
 import { useLearnerStore } from "@/lib/store";
@@ -13,7 +13,7 @@ import { useT } from "@/lib/locale-store";
 
 export function DictationRound() {
   const t = useT();
-  const questions = useMemo(() => shuffle(games.listening).slice(0, 5), []);
+  const questions = useMemo(() => pickRandom(games.listening, 5), []);
   const [index, setIndex] = useState(0);
   const [answer, setAnswer] = useState("");
   const [played, setPlayed] = useState(false);
@@ -66,8 +66,8 @@ export function DictationRound() {
         subtitle={fmt(t.games.medium.dictationResult, {
           correct: correctCount,
           total: questions.length,
-          points: correctCount * 20,
         })}
+        points={correctCount * 20}
         onAgain={restart}
         againLabel={t.common.playAgain}
       />

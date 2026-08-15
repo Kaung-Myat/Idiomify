@@ -3,14 +3,16 @@
 import { useEffect, useMemo, useState } from "react";
 import { SpeakPanel } from "@/components/practice/SpeakPanel";
 import { Button } from "@/components/ui/Button";
+import { GameResult } from "@/components/games/GameResult";
 import { games } from "@/lib/content";
+import { pickRandom } from "@/lib/games/utils";
 import { fmt } from "@/lib/i18n";
 import { useLearnerStore } from "@/lib/store";
 import { useT } from "@/lib/locale-store";
 
 export function HardSpeakRound() {
   const t = useT();
-  const prompts = useMemo(() => games.hard, []);
+  const prompts = useMemo(() => pickRandom(games.hard, 5), []);
   const [index, setIndex] = useState(0);
   const [secondsLeft, setSecondsLeft] = useState(prompts[0].seconds);
   const [running, setRunning] = useState(true);
@@ -73,21 +75,16 @@ export function HardSpeakRound() {
 
   if (finished) {
     return (
-      <div className="rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-6 text-center">
-        <h2 className="font-[family-name:var(--font-display)] text-3xl text-[var(--foam)]">
-          {t.games.hard.roundComplete}
-        </h2>
-        <p className="mt-2 text-[var(--muted)]">
-          {fmt(t.games.hard.result, {
-            passed: passCount,
-            total: prompts.length,
-            points: passCount * 30,
-          })}
-        </p>
-        <Button type="button" className="mt-6" onClick={restart}>
-          {t.common.playAgain}
-        </Button>
-      </div>
+      <GameResult
+        title={t.games.hard.roundComplete}
+        subtitle={fmt(t.games.hard.result, {
+          passed: passCount,
+          total: prompts.length,
+        })}
+        points={passCount * 30}
+        onAgain={restart}
+        againLabel={t.common.playAgain}
+      />
     );
   }
 

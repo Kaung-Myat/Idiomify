@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { GameResult } from "@/components/games/GameResult";
 import { Progress } from "@/components/ui/Progress";
 import { games } from "@/lib/content";
-import { scrambleWords, shuffle } from "@/lib/games/utils";
+import { scrambleWords, pickRandom } from "@/lib/games/utils";
 import { fmt } from "@/lib/i18n";
 import { useLearnerStore } from "@/lib/store";
 import { useT } from "@/lib/locale-store";
@@ -14,7 +14,7 @@ type Tile = { id: string; word: string };
 
 export function ScrambleRound() {
   const t = useT();
-  const questions = useMemo(() => shuffle(games.medium).slice(0, 5), []);
+  const questions = useMemo(() => pickRandom(games.medium, 5), []);
   const [index, setIndex] = useState(0);
   const [built, setBuilt] = useState<Tile[]>([]);
   const [pool, setPool] = useState<Tile[]>(() =>
@@ -87,8 +87,8 @@ export function ScrambleRound() {
         subtitle={fmt(t.games.medium.scrambleResult, {
           correct: correctCount,
           total: questions.length,
-          points: correctCount * 20,
         })}
+        points={correctCount * 20}
         onAgain={restart}
         againLabel={t.common.playAgain}
       />

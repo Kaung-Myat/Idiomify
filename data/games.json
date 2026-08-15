@@ -2,288 +2,1181 @@
   "easy": [
     {
       "id": "e01",
-      "prompt": "What does \"break the ice\" mean?",
+      "prompt": "What does \"on cloud nine\" mean?",
       "options": [
-        "To start a conversation comfortably",
-        "To freeze water quickly",
-        "To cancel a meeting",
-        "To break a glass"
+        "The ability to stay calm while waiting or dealing with problems",
+        "Able to change or adapt easily to new conditions",
+        "Eager to know or learn something",
+        "Extremely happy"
       ],
-      "answerIndex": 0
+      "answerIndex": 3
     },
     {
       "id": "e02",
-      "prompt": "What does \"piece of cake\" mean?",
+      "prompt": "What does \"once in a blue moon\" mean?",
       "options": [
-        "A dessert recipe",
-        "Something very easy",
-        "An expensive gift",
-        "A long wait"
+        "Feeling sure about your own abilities",
+        "A difficult task that tests ability or determination",
+        "To show a feeling or idea in words or actions",
+        "Very rarely"
       ],
-      "answerIndex": 1
+      "answerIndex": 3
     },
     {
       "id": "e03",
-      "prompt": "What does \"under the weather\" mean?",
+      "prompt": "What does \"learn the ropes\" mean?",
       "options": [
-        "Feeling slightly ill",
-        "Standing in the rain",
-        "Checking the forecast",
-        "Feeling energetic"
+        "To board an airplane for a trip",
+        "To introduce new ideas or methods",
+        "To keep someone informed about progress or news",
+        "To learn how to do a job or activity"
       ],
-      "answerIndex": 0
+      "answerIndex": 3
     },
     {
       "id": "e04",
-      "prompt": "What does \"hit the books\" mean?",
+      "prompt": "What does \"back to square one\" mean?",
       "options": [
-        "Throw books away",
-        "Buy new textbooks",
-        "Study hard",
-        "Visit a library for fun"
+        "To make someone very happy",
+        "To discuss something in order to reach an agreement",
+        "A regular practice that is hard to give up",
+        "To have to start over again"
       ],
-      "answerIndex": 2
+      "answerIndex": 3
     },
     {
       "id": "e05",
-      "prompt": "What does \"touch base\" mean?",
+      "prompt": "What does \"get cold feet\" mean?",
       "options": [
-        "Play baseball",
-        "Make brief contact for an update",
-        "End a project",
-        "Ignore an email"
+        "To go to bed",
+        "A way to wish someone good luck, especially before a performance",
+        "Lift gym equipment",
+        "To suddenly become too nervous to do something"
       ],
-      "answerIndex": 1
+      "answerIndex": 3
     },
     {
       "id": "e06",
-      "prompt": "What does \"on the same page\" mean?",
+      "prompt": "What does \"better late than never\" mean?",
       "options": [
-        "Reading together",
-        "Sitting side by side",
-        "Sharing the same understanding",
-        "Using the same notebook"
+        "To become less patient or less effective over time",
+        "To stop briefly during a trip, often for fuel or rest",
+        "To examine something carefully to understand it",
+        "It is better to do something late than not do it at all"
       ],
-      "answerIndex": 2
+      "answerIndex": 3
     },
     {
       "id": "e07",
-      "prompt": "What does \"over the moon\" mean?",
+      "prompt": "What does \"put something on hold\" mean?",
       "options": [
-        "Extremely happy",
-        "Traveling to space",
-        "Feeling sleepy",
-        "Being confused"
+        "To do something poorly to save time or money",
+        "To get some sleep, especially during a trip",
+        "It is your turn to take action or make a decision",
+        "To temporarily stop working on something"
       ],
-      "answerIndex": 0
+      "answerIndex": 3
     },
     {
       "id": "e08",
-      "prompt": "What does \"raise the bar\" mean?",
+      "prompt": "What does \"make a pit stop\" mean?",
       "options": [
-        "Lift gym equipment",
-        "Set a higher standard",
-        "Close a shop early",
-        "Reduce expectations"
+        "To become less patient or less effective over time",
+        "To carefully consider different choices",
+        "A choice made after thinking",
+        "To stop briefly during a trip, often for fuel or rest"
       ],
-      "answerIndex": 1
+      "answerIndex": 3
     },
     {
       "id": "e09",
-      "prompt": "What does \"spill the beans\" mean?",
+      "prompt": "What does \"win-win situation\" mean?",
       "options": [
-        "Cook dinner",
-        "Drop groceries",
-        "Reveal a secret",
-        "Clean the kitchen"
+        "Having good manners; respectful and considerate",
+        "Information about reactions to a product or performance",
+        "To give someone a reason or enthusiasm to do something",
+        "An outcome that benefits everyone involved"
       ],
-      "answerIndex": 2
+      "answerIndex": 3
     },
     {
       "id": "e10",
-      "prompt": "What does \"call it a day\" mean?",
+      "prompt": "What does \"smooth sailing\" mean?",
       "options": [
-        "Name a holiday",
-        "Stop working for now",
-        "Start a new job",
-        "Plan tomorrow's tasks"
+        "To discuss something in order to reach an agreement",
+        "Something that takes your attention away",
+        "To stop working on something for now",
+        "Progress that is easy and without problems"
       ],
-      "answerIndex": 1
+      "answerIndex": 3
+    },
+    {
+      "id": "e11",
+      "prompt": "What does \"miss the boat\" mean?",
+      "options": [
+        "An informal talk between two or more people",
+        "Able to express thoughts and ideas clearly and effectively",
+        "In a place that is unusual or not popular with tourists",
+        "To miss an opportunity by acting too late"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e12",
+      "prompt": "What does \"under the weather\" mean?",
+      "options": [
+        "In a place that is unusual or not popular with tourists",
+        "To release anger or stress by doing something energetic",
+        "Information about reactions to a product or performance",
+        "Feeling slightly ill"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e13",
+      "prompt": "What does \"weigh the options\" mean?",
+      "options": [
+        "To learn how to do a job or activity",
+        "Acting the same way over time; steady",
+        "The situation that helps explain the meaning of words",
+        "To carefully consider different choices"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e14",
+      "prompt": "What does \"bite the bullet\" mean?",
+      "options": [
+        "To be the first to act or to guide others",
+        "Close a shop early",
+        "Having good manners; respectful and considerate",
+        "To face a difficult situation with courage"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e15",
+      "prompt": "What does \"catch a flight\" mean?",
+      "options": [
+        "Giving a lot of information clearly in a few words",
+        "Ignore an email",
+        "Dealing with things sensibly and realistically",
+        "To board an airplane for a trip"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e16",
+      "prompt": "What does \"take a scenic route\" mean?",
+      "options": [
+        "Extremely happy",
+        "A regular practice that is hard to give up",
+        "Travel to space",
+        "To choose a longer path because it is more beautiful"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e17",
+      "prompt": "What does \"take the lead\" mean?",
+      "options": [
+        "Lift gym equipment",
+        "To offer skills, ideas, or resources",
+        "An outcome that benefits everyone involved",
+        "To be the first to act or to guide others"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e18",
+      "prompt": "What does \"cost an arm and a leg\" mean?",
+      "options": [
+        "To temporarily stop working on something",
+        "A feeling of trust in your own abilities",
+        "It is better to do something late than not do it at all",
+        "To be very expensive"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e19",
+      "prompt": "What does \"think outside the box\" mean?",
+      "options": [
+        "A plan designed to achieve a long-term goal",
+        "To face a difficult situation with courage",
+        "Able to express thoughts and ideas clearly and effectively",
+        "To think creatively and unconventionally"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e20",
+      "prompt": "What does \"hit the road\" mean?",
+      "options": [
+        "Crowded tightly into a small space",
+        "Open to more than one interpretation; unclear",
+        "To stop someone while they are speaking",
+        "To leave or begin a journey"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e21",
+      "prompt": "What does \"keep someone in the loop\" mean?",
+      "options": [
+        "Feeling sad or depressed",
+        "To stop working on something for now",
+        "Able to change or adapt easily to new conditions",
+        "To keep someone informed about progress or news"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e22",
+      "prompt": "What does \"down in the dumps\" mean?",
+      "options": [
+        "Buy expensive gifts",
+        "Acting the same way over time; steady",
+        "A feeling of trust in your own abilities",
+        "Feeling sad or depressed"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e23",
+      "prompt": "What does \"a blessing in disguise\" mean?",
+      "options": [
+        "Something that takes your attention away",
+        "A promise or firm decision to do something",
+        "To suddenly become too nervous to do something",
+        "Something that seems bad at first but turns out to be good"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e24",
+      "prompt": "What does \"have a soft spot for\" mean?",
+      "options": [
+        "To annoy or irritate someone",
+        "Able to speak a language easily and accurately",
+        "To keep someone informed about progress or news",
+        "To feel special affection for someone or something"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e25",
+      "prompt": "What does \"kill two birds with one stone\" mean?",
+      "options": [
+        "A plan designed to achieve a long-term goal",
+        "An informal talk between two or more people",
+        "To recognize the value of something or someone",
+        "To achieve two goals with a single action"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e26",
+      "prompt": "What does \"jet lag\" mean?",
+      "options": [
+        "To show a feeling or idea in words or actions",
+        "The ability to stay calm while waiting or dealing with problems",
+        "To face a difficult situation with courage",
+        "Tiredness after a long flight across time zones"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e27",
+      "prompt": "What does \"butterflies in your stomach\" mean?",
+      "options": [
+        "To stop someone while they are speaking",
+        "A choice made after thinking",
+        "To accidentally reveal a secret",
+        "A nervous feeling before something important"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e28",
+      "prompt": "What does \"go the extra mile\" mean?",
+      "options": [
+        "Extremely happy",
+        "Fluent and persuasive in speaking or writing",
+        "To learn how to do a job or activity",
+        "To make a special effort beyond what is expected"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e29",
+      "prompt": "What does \"persuade\" mean?",
+      "options": [
+        "Something that takes your attention away",
+        "To recognize the value of something or someone",
+        "Something that is more important than other things",
+        "To cause someone to do or believe something through reasoning"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e30",
+      "prompt": "What does \"conversation\" mean?",
+      "options": [
+        "Forward movement toward a goal",
+        "To get to the main point quickly",
+        "To show your feelings openly",
+        "An informal talk between two or more people"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e31",
+      "prompt": "What does \"analyze\" mean?",
+      "options": [
+        "To not smile or laugh even when something is funny",
+        "To set a higher standard",
+        "To give special importance to something",
+        "To examine something carefully to understand it"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e32",
+      "prompt": "What does \"concise\" mean?",
+      "options": [
+        "To annoy or irritate someone",
+        "A nervous feeling before something important",
+        "To think carefully about something before deciding",
+        "Giving a lot of information clearly in a few words"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e33",
+      "prompt": "What does \"curiosity\" mean?",
+      "options": [
+        "To make contact briefly for an update",
+        "To keep someone informed about progress or news",
+        "To carefully consider different choices",
+        "A strong desire to know or learn something"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e34",
+      "prompt": "What does \"emphasize\" mean?",
+      "options": [
+        "In a place that is unusual or not popular with tourists",
+        "Something very easy to do",
+        "To board an airplane for a trip",
+        "To give special importance to something"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e35",
+      "prompt": "What does \"fluent\" mean?",
+      "options": [
+        "To carefully consider different choices",
+        "To achieve two goals with a single action",
+        "To cause someone to do or believe something through reasoning",
+        "Able to speak a language easily and accurately"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e36",
+      "prompt": "What does \"efficient\" mean?",
+      "options": [
+        "Extremely happy or delighted",
+        "A feeling of relief after a worry is gone",
+        "The ability to stay calm while waiting or dealing with problems",
+        "Achieving maximum productivity with minimum wasted effort"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e37",
+      "prompt": "What does \"patience\" mean?",
+      "options": [
+        "Dealing with things sensibly and realistically",
+        "A plan designed to achieve a long-term goal",
+        "To be the first to act or to guide others",
+        "The ability to stay calm while waiting or dealing with problems"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e38",
+      "prompt": "What does \"hesitate\" mean?",
+      "options": [
+        "To be deeply affected by criticism or advice",
+        "A phrase with a meaning different from the literal words",
+        "Throw books away",
+        "To pause before doing something because of uncertainty"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e39",
+      "prompt": "What does \"curious\" mean?",
+      "options": [
+        "To finish or conclude something",
+        "To recognize the value of something or someone",
+        "Something very easy to do",
+        "Eager to know or learn something"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "e40",
+      "prompt": "What does \"priority\" mean?",
+      "options": [
+        "To take very little luggage",
+        "A strong desire to travel and explore",
+        "To show your feelings openly",
+        "Something that is more important than other things"
+      ],
+      "answerIndex": 3
     }
   ],
   "matching": [
     {
       "id": "mp01",
-      "term": "break the ice",
-      "definition": "Start a conversation comfortably"
+      "term": "keep someone in the loop",
+      "definition": "To keep someone informed about progress or news"
     },
     {
       "id": "mp02",
-      "term": "piece of cake",
-      "definition": "Something very easy"
+      "term": "bring to the table",
+      "definition": "To offer skills, ideas, or resources"
     },
     {
       "id": "mp03",
-      "term": "hit the books",
-      "definition": "Study hard"
+      "term": "on the same page",
+      "definition": "In agreement or sharing the same understanding"
     },
     {
       "id": "mp04",
-      "term": "touch base",
-      "definition": "Make brief contact for an update"
+      "term": "cost an arm and a leg",
+      "definition": "To be very expensive"
     },
     {
       "id": "mp05",
-      "term": "over the moon",
-      "definition": "Extremely happy"
+      "term": "under the weather",
+      "definition": "Feeling slightly ill"
     },
     {
       "id": "mp06",
+      "term": "better late than never",
+      "definition": "It is better to do something late than not do it at all"
+    },
+    {
+      "id": "mp07",
+      "term": "off the beaten path",
+      "definition": "In a place that is unusual or not popular with tourists"
+    },
+    {
+      "id": "mp08",
+      "term": "put something on hold",
+      "definition": "To temporarily stop working on something"
+    },
+    {
+      "id": "mp09",
+      "term": "a blessing in disguise",
+      "definition": "Something that seems bad at first but turns out to be good"
+    },
+    {
+      "id": "mp10",
+      "term": "hang in there",
+      "definition": "To keep going during a difficult time"
+    },
+    {
+      "id": "mp11",
+      "term": "get the ball rolling",
+      "definition": "To start a process or project"
+    },
+    {
+      "id": "mp12",
+      "term": "blow off steam",
+      "definition": "To release anger or stress by doing something energetic"
+    },
+    {
+      "id": "mp13",
+      "term": "once in a blue moon",
+      "definition": "Very rarely"
+    },
+    {
+      "id": "mp14",
+      "term": "take something to heart",
+      "definition": "To be deeply affected by criticism or advice"
+    },
+    {
+      "id": "mp15",
+      "term": "let the cat out of the bag",
+      "definition": "To accidentally reveal a secret"
+    },
+    {
+      "id": "mp16",
       "term": "raise the bar",
-      "definition": "Set a higher standard"
+      "definition": "To set a higher standard"
+    },
+    {
+      "id": "mp17",
+      "term": "piece of cake",
+      "definition": "Something very easy to do"
+    },
+    {
+      "id": "mp18",
+      "term": "down in the dumps",
+      "definition": "Feeling sad or depressed"
+    },
+    {
+      "id": "mp19",
+      "term": "a weight off your shoulders",
+      "definition": "A feeling of relief after a worry is gone"
+    },
+    {
+      "id": "mp20",
+      "term": "back to square one",
+      "definition": "To have to start over again"
+    },
+    {
+      "id": "mp21",
+      "term": "keep a straight face",
+      "definition": "To not smile or laugh even when something is funny"
+    },
+    {
+      "id": "mp22",
+      "term": "live out of a suitcase",
+      "definition": "To travel so often that you never fully unpack"
+    },
+    {
+      "id": "mp23",
+      "term": "think outside the box",
+      "definition": "To think creatively and unconventionally"
+    },
+    {
+      "id": "mp24",
+      "term": "jet lag",
+      "definition": "Tiredness after a long flight across time zones"
     }
   ],
   "medium": [
     {
       "id": "m01",
-      "sentence": "She told a joke to _____ at the party.",
-      "answer": "break the ice",
-      "hint": "start a friendly conversation"
+      "sentence": "My patience is starting to _____.",
+      "answer": "wear thin",
+      "hint": "to become less patient or less effective over…"
     },
     {
       "id": "m02",
-      "sentence": "I need to _____ before the final exam.",
-      "answer": "hit the books",
-      "hint": "study hard"
+      "sentence": "Missing the bus was _____.",
+      "answer": "a blessing in disguise",
+      "hint": "something that seems bad at first but turns…"
     },
     {
       "id": "m03",
-      "sentence": "Let's _____ on the new campaign this morning.",
-      "answer": "get the ball rolling",
-      "hint": "start the process"
+      "sentence": "Let's make sure we're _____ before we pitch.",
+      "answer": "on the same page",
+      "hint": "in agreement or sharing the same understanding"
     },
     {
       "id": "m04",
-      "sentence": "She was _____ about her acceptance letter.",
-      "answer": "over the moon",
-      "hint": "extremely happy"
+      "sentence": "He _____ about the gift.",
+      "answer": "let the cat out of the bag",
+      "hint": "to accidentally reveal a secret"
     },
     {
       "id": "m05",
+      "sentence": "The deal fell through, so we're _____.",
+      "answer": "back to square one",
+      "hint": "to have to start over again"
+    },
+    {
+      "id": "m06",
+      "sentence": "After the border check, it was _____.",
+      "answer": "smooth sailing",
+      "hint": "progress that is easy and without problems"
+    },
+    {
+      "id": "m07",
+      "sentence": "She was _____ about her acceptance letter.",
+      "answer": "over the moon",
+      "hint": "extremely happy or delighted"
+    },
+    {
+      "id": "m08",
+      "sentence": "He's been _____ since the match.",
+      "answer": "down in the dumps",
+      "hint": "feeling sad or depressed"
+    },
+    {
+      "id": "m09",
       "sentence": "We should _____ before traffic gets bad.",
       "answer": "hit the road",
-      "hint": "begin the journey"
+      "hint": "to leave or begin a journey"
+    },
+    {
+      "id": "m10",
+      "sentence": "They found a cafe _____.",
+      "answer": "off the beaten path",
+      "hint": "in a place that is unusual or not popular with…"
+    },
+    {
+      "id": "m11",
+      "sentence": "_____ — things will get better.",
+      "answer": "keep your chin up",
+      "hint": "stay positive during a difficult time"
+    },
+    {
+      "id": "m12",
+      "sentence": "Let's _____ the meeting in five minutes.",
+      "answer": "wrap up",
+      "hint": "to finish or conclude something"
+    },
+    {
+      "id": "m13",
+      "sentence": "What can each team member _____?",
+      "answer": "bring to the table",
+      "hint": "to offer skills, ideas, or resources"
+    },
+    {
+      "id": "m14",
+      "sentence": "I need to _____ before the final exam.",
+      "answer": "hit the books",
+      "hint": "to study hard"
+    },
+    {
+      "id": "m15",
+      "sentence": "Don't _____ on quality control.",
+      "answer": "cut corners",
+      "hint": "to do something poorly to save time or money"
+    },
+    {
+      "id": "m16",
+      "sentence": "I stayed home because I was _____.",
+      "answer": "under the weather",
+      "hint": "feeling slightly ill"
+    },
+    {
+      "id": "m17",
+      "sentence": "Consultants often _____.",
+      "answer": "live out of a suitcase",
+      "hint": "to travel so often that you never fully unpack"
+    },
+    {
+      "id": "m18",
+      "sentence": "It was hard to _____ during the joke.",
+      "answer": "keep a straight face",
+      "hint": "to not smile or laugh even when something is…"
+    },
+    {
+      "id": "m19",
+      "sentence": "We've done enough; let's _____.",
+      "answer": "call it a day",
+      "hint": "to stop working on something for now"
+    },
+    {
+      "id": "m20",
+      "sentence": "The quiz was a _____.",
+      "answer": "piece of cake",
+      "hint": "something very easy to do"
+    },
+    {
+      "id": "m21",
+      "sentence": "I'm exhausted — time to _____.",
+      "answer": "hit the sack",
+      "hint": "to go to bed"
+    },
+    {
+      "id": "m22",
+      "sentence": "Let's _____ before we decide.",
+      "answer": "weigh the options",
+      "hint": "to carefully consider different choices"
+    },
+    {
+      "id": "m23",
+      "sentence": "It took a week to _____ at the new office.",
+      "answer": "learn the ropes",
+      "hint": "to learn how to do a job or activity"
+    },
+    {
+      "id": "m24",
+      "sentence": "I go for a run to _____.",
+      "answer": "blow off steam",
+      "hint": "to release anger or stress by doing something…"
     }
   ],
   "listening": [
     {
       "id": "l01",
-      "speak": "break the ice",
+      "speak": "packed like sardines",
       "options": [
-        "Start a friendly conversation",
-        "Freeze water quickly",
-        "Cancel a meeting",
-        "Break a glass"
+        "To make something clearer or easier to understand",
+        "Throw books away",
+        "To take a break from everyday stress, often by traveling",
+        "Crowded tightly into a small space"
       ],
-      "answerIndex": 0
+      "answerIndex": 3
     },
     {
       "id": "l02",
-      "speak": "piece of cake",
+      "speak": "take the lead",
       "options": [
-        "A dessert recipe",
-        "Something very easy",
-        "An expensive gift",
-        "A long wait"
+        "To suddenly become too nervous to do something",
+        "To stop someone while they are speaking",
+        "A nervous feeling before something important",
+        "To be the first to act or to guide others"
       ],
-      "answerIndex": 1
+      "answerIndex": 3
     },
     {
       "id": "l03",
-      "speak": "get the ball rolling",
+      "speak": "under the weather",
       "options": [
-        "Play sports",
-        "End a meeting",
-        "Start a process",
-        "Buy equipment"
+        "Ignore an email",
+        "Dealing with things sensibly and realistically",
+        "Giving a lot of information clearly in a few words",
+        "Feeling slightly ill"
       ],
-      "answerIndex": 2
+      "answerIndex": 3
     },
     {
       "id": "l04",
-      "speak": "over the moon",
+      "speak": "keep someone in the loop",
       "options": [
-        "Extremely happy",
-        "Traveling to space",
-        "Feeling sleepy",
-        "Being confused"
+        "To start a process or project",
+        "Extremely happy or delighted",
+        "To examine something carefully to understand it",
+        "To keep someone informed about progress or news"
       ],
-      "answerIndex": 0
+      "answerIndex": 3
     },
     {
       "id": "l05",
+      "speak": "down in the dumps",
+      "options": [
+        "To become less patient or less effective over time",
+        "A feeling of trust in your own abilities",
+        "To show your feelings openly",
+        "Feeling sad or depressed"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "l06",
+      "speak": "the ball is in your court",
+      "options": [
+        "To set a higher standard",
+        "To examine something carefully to understand it",
+        "To not smile or laugh even when something is funny",
+        "It is your turn to take action or make a decision"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "l07",
+      "speak": "a blessing in disguise",
+      "options": [
+        "Very rarely",
+        "Throw books away",
+        "Something that takes your attention away",
+        "Something that seems bad at first but turns out to be good"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "l08",
+      "speak": "touch base",
+      "options": [
+        "Feeling worried or uneasy",
+        "A promise or firm decision to do something",
+        "To become less patient or less effective over time",
+        "To make contact briefly for an update"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "l09",
+      "speak": "piece of cake",
+      "options": [
+        "To get some sleep, especially during a trip",
+        "To get to the main point quickly",
+        "To discuss something in order to reach an agreement",
+        "Something very easy to do"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "l10",
+      "speak": "bite the bullet",
+      "options": [
+        "Able to change or adapt easily to new conditions",
+        "To think carefully about something before deciding",
+        "Acting the same way over time; steady",
+        "To face a difficult situation with courage"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "l11",
+      "speak": "wear thin",
+      "options": [
+        "Honest and genuine in feeling or intention",
+        "Lift gym equipment",
+        "To take a break from everyday stress, often by traveling",
+        "To become less patient or less effective over time"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "l12",
+      "speak": "take something to heart",
+      "options": [
+        "An informal talk between two or more people",
+        "A plan designed to achieve a long-term goal",
+        "To recognize the value of something or someone",
+        "To be deeply affected by criticism or advice"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "l13",
+      "speak": "bring to the table",
+      "options": [
+        "Something that is more important than other things",
+        "Travel to space",
+        "To discuss something in order to reach an agreement",
+        "To offer skills, ideas, or resources"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "l14",
+      "speak": "lose your cool",
+      "options": [
+        "To make a special effort beyond what is expected",
+        "Able to express thoughts and ideas clearly and effectively",
+        "Able to be trusted or depended on",
+        "To become angry or lose composure"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "l15",
+      "speak": "live out of a suitcase",
+      "options": [
+        "Extremely happy",
+        "Giving a lot of information clearly in a few words",
+        "To think carefully about something before deciding",
+        "To travel so often that you never fully unpack"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "l16",
+      "speak": "make a pit stop",
+      "options": [
+        "To set a higher standard",
+        "Crowded tightly into a small space",
+        "To face a difficult situation with courage",
+        "To stop briefly during a trip, often for fuel or rest"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "l17",
+      "speak": "burn the midnight oil",
+      "options": [
+        "Dealing with things sensibly and realistically",
+        "A feeling of relief after a worry is gone",
+        "To give someone support or confidence",
+        "To work or study late into the night"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "l18",
+      "speak": "wear your heart on your sleeve",
+      "options": [
+        "Feeling worried or uneasy",
+        "It is your turn to take action or make a decision",
+        "To set a higher standard",
+        "To show your feelings openly"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "l19",
+      "speak": "get away from it all",
+      "options": [
+        "Able to recover quickly from difficulties",
+        "Throw books away",
+        "Forward movement toward a goal",
+        "To take a break from everyday stress, often by traveling"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "l20",
+      "speak": "miss the boat",
+      "options": [
+        "To board an airplane for a trip",
+        "In a place that is unusual or not popular with tourists",
+        "Something very easy to do",
+        "To miss an opportunity by acting too late"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "l21",
+      "speak": "cut to the chase",
+      "options": [
+        "Buy expensive gifts",
+        "To annoy or irritate someone",
+        "Tiredness after a long flight across time zones",
+        "To get to the main point quickly"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "l22",
+      "speak": "have a soft spot for",
+      "options": [
+        "A difficult task that tests ability or determination",
+        "To finish or conclude something",
+        "To make a noticeable positive impact",
+        "To feel special affection for someone or something"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "l23",
+      "speak": "butterflies in your stomach",
+      "options": [
+        "To travel so often that you never fully unpack",
+        "Feeling sure about your own abilities",
+        "Close a shop early",
+        "A nervous feeling before something important"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "l24",
       "speak": "hit the road",
       "options": [
-        "Repair a street",
-        "Begin a journey",
-        "Stop traveling",
-        "Buy a car"
+        "A strong desire to travel and explore",
+        "To choose a longer path because it is more beautiful",
+        "To study hard",
+        "To leave or begin a journey"
       ],
-      "answerIndex": 1
+      "answerIndex": 3
     }
   ],
   "hard": [
     {
       "id": "h01",
-      "target": "Let's get the ball rolling on this project.",
-      "seconds": 15
+      "target": "Let's weigh the options before we decide.",
+      "seconds": 12
     },
     {
       "id": "h02",
-      "target": "I always get butterflies in my stomach before speaking.",
+      "target": "You finished the homework — better late than never.",
       "seconds": 15
     },
     {
       "id": "h03",
-      "target": "Please think outside the box for this challenge.",
+      "target": "After the border check, it was smooth sailing.",
       "seconds": 15
     },
     {
       "id": "h04",
-      "target": "Keep your chin up during difficult times.",
+      "target": "He wears his heart on his sleeve.",
       "seconds": 12
     },
     {
       "id": "h05",
-      "target": "The ball is in your court now.",
+      "target": "Finishing the project was a weight off my shoulders.",
+      "seconds": 15
+    },
+    {
+      "id": "h06",
+      "target": "I appreciate your honest feedback.",
       "seconds": 12
+    },
+    {
+      "id": "h07",
+      "target": "This internship is a great opportunity.",
+      "seconds": 12
+    },
+    {
+      "id": "h08",
+      "target": "The deal fell through, so we're back to square one.",
+      "seconds": 15
+    },
+    {
+      "id": "h09",
+      "target": "She gave an articulate explanation of the problem.",
+      "seconds": 15
+    },
+    {
+      "id": "h10",
+      "target": "Games help expand your vocabulary.",
+      "seconds": 12
+    },
+    {
+      "id": "h11",
+      "target": "Put your phone away to avoid distraction.",
+      "seconds": 12
+    },
+    {
+      "id": "h12",
+      "target": "She kept meticulous notes during the lecture.",
+      "seconds": 12
+    },
+    {
+      "id": "h13",
+      "target": "Please don't interrupt until she finishes.",
+      "seconds": 12
+    },
+    {
+      "id": "h14",
+      "target": "An accurate score helps you know what to improve.",
+      "seconds": 15
+    },
+    {
+      "id": "h15",
+      "target": "Don't spill the beans about the surprise party.",
+      "seconds": 15
+    },
+    {
+      "id": "h16",
+      "target": "We need a clear study strategy.",
+      "seconds": 12
+    },
+    {
+      "id": "h17",
+      "target": "Don't hesitate to ask questions in class.",
+      "seconds": 12
+    },
+    {
+      "id": "h18",
+      "target": "I need to hit the books before the final exam.",
+      "seconds": 15
+    },
+    {
+      "id": "h19",
+      "target": "Designers and engineers collaborate closely.",
+      "seconds": 12
+    },
+    {
+      "id": "h20",
+      "target": "Try to catch some shut-eye on the overnight bus.",
+      "seconds": 15
     }
   ],
   "multiHard": [
     {
       "id": "mh01",
       "phrases": [
-        "Let's get the ball rolling.",
-        "The ball is in your court."
+        "In the driver's seat.",
+        "Let's make a pit stop for coffee.",
+        "Wanderlust."
       ],
-      "startSeconds": 28
+      "startSeconds": 36
     },
     {
       "id": "mh02",
       "phrases": [
         "Keep your chin up.",
-        "I have butterflies in my stomach.",
-        "Think outside the box."
+        "Miss the boat."
       ],
-      "startSeconds": 36
+      "startSeconds": 28
     },
     {
       "id": "mh03",
       "phrases": [
-        "Break the ice with a joke.",
-        "Call it a day when you are ready."
+        "For a weekend trip, travel light.",
+        "What can each team member bring to the table?."
       ],
-      "startSeconds": 30
+      "startSeconds": 28
+    },
+    {
+      "id": "mh04",
+      "phrases": [
+        "Call it a day.",
+        "Wear your heart on your sleeve.",
+        "Smooth sailing."
+      ],
+      "startSeconds": 36
+    },
+    {
+      "id": "mh05",
+      "phrases": [
+        "The quiz was a piece of cake.",
+        "Back to square one."
+      ],
+      "startSeconds": 28
+    },
+    {
+      "id": "mh06",
+      "phrases": [
+        "He let the cat out of the bag about the gift.",
+        "Packed like sardines."
+      ],
+      "startSeconds": 28
+    },
+    {
+      "id": "mh07",
+      "phrases": [
+        "Better late than never.",
+        "Jet lag.",
+        "Don't spill the beans about the surprise party."
+      ],
+      "startSeconds": 36
+    },
+    {
+      "id": "mh08",
+      "phrases": [
+        "Missing the bus was a blessing in disguise.",
+        "Hit the road."
+      ],
+      "startSeconds": 28
+    },
+    {
+      "id": "mh09",
+      "phrases": [
+        "Keep someone in the loop.",
+        "I need to hit the books before the final exam."
+      ],
+      "startSeconds": 28
+    },
+    {
+      "id": "mh10",
+      "phrases": [
+        "Lose your cool.",
+        "Live out of a suitcase.",
+        "Under the weather."
+      ],
+      "startSeconds": 36
+    },
+    {
+      "id": "mh11",
+      "phrases": [
+        "Touch base.",
+        "Spill the beans."
+      ],
+      "startSeconds": 28
+    },
+    {
+      "id": "mh12",
+      "phrases": [
+        "Travel light.",
+        "Call it a night."
+      ],
+      "startSeconds": 28
     }
   ]
 }

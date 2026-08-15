@@ -30,6 +30,12 @@ export function shuffle<T>(items: T[]): T[] {
   return shuffleWith(items, Math.random);
 }
 
+/** Shuffle then take up to `count` items (fresh random set each call). */
+export function pickRandom<T>(items: T[], count: number): T[] {
+  if (count >= items.length) return shuffle(items);
+  return shuffle(items).slice(0, Math.max(0, count));
+}
+
 export function todayKey(d = new Date()): string {
   const y = d.getFullYear();
   const m = String(d.getMonth() + 1).padStart(2, "0");

@@ -2,25 +2,18 @@
 
 import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/Button";
+import { GameResult } from "@/components/games/GameResult";
 import { Progress } from "@/components/ui/Progress";
 import { games } from "@/lib/content";
+import { pickRandom, shuffle } from "@/lib/games/utils";
 import { fmt } from "@/lib/i18n";
 import { useLearnerStore } from "@/lib/store";
 import { useT } from "@/lib/locale-store";
 
-function shuffle<T>(items: T[]): T[] {
-  const next = [...items];
-  for (let i = next.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [next[i], next[j]] = [next[j], next[i]];
-  }
-  return next;
-}
-
 export function MatchingRound() {
   const t = useT();
-  const pairs = useMemo(() => games.matching.slice(0, 6), []);
-  const [leftOrder] = useState(() => pairs.map((p) => p.id));
+  const pairs = useMemo(() => pickRandom(games.matching, 6), []);
+  const [leftOrder] = useState(() => shuffle(pairs.map((p) => p.id)));
   const [rightOrder] = useState(() => shuffle(pairs.map((p) => p.id)));
   const [selectedLeft, setSelectedLeft] = useState<string | null>(null);
   const [matched, setMatched] = useState<Set<string>>(() => new Set());
@@ -73,22 +66,17 @@ export function MatchingRound() {
 
   if (finished) {
     return (
-      <div className="rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-6 text-center">
-        <h2 className="font-[family-name:var(--font-display)] text-3xl text-[var(--foam)]">
-          {t.games.easy.matchingComplete}
-        </h2>
-        <p className="mt-2 text-[var(--muted)]">
-          {fmt(t.games.easy.matchingResult, {
-            correct: pairs.length,
-            total: pairs.length,
-            points: pairs.length * 10,
-            mistakes,
-          })}
-        </p>
-        <Button type="button" className="mt-6" onClick={restart}>
-          {t.common.playAgain}
-        </Button>
-      </div>
+      <GameResult
+        title={t.games.easy.matchingComplete}
+        subtitle={fmt(t.games.easy.matchingResult, {
+          correct: pairs.length,
+          total: pairs.length,
+          mistakes,
+        })}
+        points={pairs.length * 10}
+        onAgain={restart}
+        againLabel={t.common.playAgain}
+      />
     );
   }
 

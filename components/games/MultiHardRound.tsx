@@ -5,7 +5,7 @@ import { SpeakPanel } from "@/components/practice/SpeakPanel";
 import { Button } from "@/components/ui/Button";
 import { GameResult } from "@/components/games/GameResult";
 import { games } from "@/lib/content";
-import { shuffle } from "@/lib/games/utils";
+import { pickRandom } from "@/lib/games/utils";
 import { fmt } from "@/lib/i18n";
 import { useLearnerStore } from "@/lib/store";
 import { useT } from "@/lib/locale-store";
@@ -15,7 +15,7 @@ const DECREASE = 3;
 
 export function MultiHardRound() {
   const t = useT();
-  const challenges = useMemo(() => shuffle(games.multiHard), []);
+  const challenges = useMemo(() => pickRandom(games.multiHard, 3), []);
   const [cIndex, setCIndex] = useState(0);
   const [pIndex, setPIndex] = useState(0);
   const [secondsLeft, setSecondsLeft] = useState(
@@ -108,8 +108,8 @@ export function MultiHardRound() {
         subtitle={fmt(t.games.hard.multiResult, {
           passed: passCount,
           total: totalPhrases,
-          points: passCount * 30,
         })}
+        points={passCount * 30}
         onAgain={restart}
         againLabel={t.common.playAgain}
       />

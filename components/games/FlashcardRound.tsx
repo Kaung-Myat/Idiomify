@@ -5,14 +5,14 @@ import { Button } from "@/components/ui/Button";
 import { GameResult } from "@/components/games/GameResult";
 import { Progress } from "@/components/ui/Progress";
 import { games } from "@/lib/content";
-import { shuffle } from "@/lib/games/utils";
+import { pickRandom } from "@/lib/games/utils";
 import { fmt } from "@/lib/i18n";
 import { useLearnerStore } from "@/lib/store";
 import { useT } from "@/lib/locale-store";
 
 export function FlashcardRound() {
   const t = useT();
-  const deck = useMemo(() => shuffle(games.matching).slice(0, 6), []);
+  const deck = useMemo(() => pickRandom(games.matching, 6), []);
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [known, setKnown] = useState(0);
@@ -47,8 +47,8 @@ export function FlashcardRound() {
         subtitle={fmt(t.games.easy.flashResult, {
           correct: known,
           total: deck.length,
-          points: known * 10,
         })}
+        points={known * 10}
         onAgain={restart}
         againLabel={t.common.playAgain}
       />
