@@ -111,29 +111,52 @@ export function SpeedRound() {
 
   return (
     <div className="space-y-5">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <Progress
-          value={index + 1}
-          max={questions.length}
-          label={t.common.progress}
-        />
-        <div className="flex items-center gap-3 text-sm">
-          <span className="text-[var(--muted)]">
-            {fmt(t.games.easy.lives, { count: lives })}
-          </span>
-          <span
-            className={`font-semibold tabular-nums ${
-              secondsLeft <= 3 ? "text-[var(--danger-fg)]" : "text-[var(--accent)]"
-            }`}
+      <div className="flex items-center justify-between gap-3 rounded-2xl border border-[var(--line)] bg-[var(--surface)] px-4 py-3">
+        <div>
+          <p className="text-xs uppercase tracking-[0.14em] text-[var(--muted)]">
+            {t.games.easy.livesLabel}
+          </p>
+          <div
+            className="mt-1.5 flex items-center gap-1.5"
+            aria-label={fmt(t.games.easy.lives, { count: lives })}
           >
-            {secondsLeft}s
-          </span>
-          {streak > 1 ? (
-            <span className="text-[var(--ok-fg)]">
-              {fmt(t.games.easy.streak, { count: streak })}
+            {Array.from({ length: LIVES }, (_, i) => (
+              <span
+                key={i}
+                className={`inline-block h-4 w-4 rounded-full ${
+                  i < lives
+                    ? "bg-[var(--accent)]"
+                    : "bg-[var(--line)]"
+                }`}
+              />
+            ))}
+            <span className="ml-1 text-sm font-semibold tabular-nums text-[var(--foam)]">
+              {lives}/{LIVES}
             </span>
-          ) : null}
+          </div>
         </div>
+        <p
+          className={`font-[family-name:var(--font-display)] text-2xl tabular-nums ${
+            secondsLeft <= 3 ? "text-[var(--danger-fg)]" : "text-[var(--accent)]"
+          }`}
+        >
+          {secondsLeft}s
+        </p>
+      </div>
+
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="min-w-0 flex-1">
+          <Progress
+            value={index + 1}
+            max={questions.length}
+            label={t.common.progress}
+          />
+        </div>
+        {streak > 1 ? (
+          <span className="shrink-0 text-sm font-semibold text-[var(--ok-fg)]">
+            {fmt(t.games.easy.streak, { count: streak })}
+          </span>
+        ) : null}
       </div>
 
       <article className="rounded-3xl border border-[var(--line)] bg-[var(--surface)] p-6">
@@ -145,22 +168,18 @@ export function SpeedRound() {
         </h2>
         <div className="mt-5 grid gap-2">
           {question.options.map((option, i) => {
-            let style =
-              "border-[var(--line)] hover:border-[var(--accent)] text-left";
-            if (revealed) {
-              if (i === question.answerIndex) {
-                style = "border-[var(--ok-border)] bg-[var(--ok-bg)]";
-              } else if (i === selected) {
-                style = "border-[var(--danger-border)] bg-[var(--danger-bg)]";
-              }
-            }
+            const isSelected = selected === i;
             return (
               <button
                 key={option}
                 type="button"
                 disabled={revealed}
                 onClick={() => choose(i)}
-                className={`rounded-xl border px-4 py-3 text-sm text-[var(--foam)] transition disabled:opacity-60 ${style}`}
+                className={`rounded-xl border px-4 py-3 text-left text-sm text-[var(--foam)] transition disabled:opacity-60 ${
+                  isSelected
+                    ? "border-[var(--accent)] bg-[var(--accent)]/10 disabled:opacity-100"
+                    : "border-[var(--line)] hover:border-[var(--accent)]"
+                }`}
               >
                 {option}
               </button>

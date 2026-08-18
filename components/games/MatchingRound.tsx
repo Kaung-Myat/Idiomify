@@ -17,9 +17,6 @@ export function MatchingRound() {
   const [rightOrder] = useState(() => shuffle(pairs.map((p) => p.id)));
   const [selectedLeft, setSelectedLeft] = useState<string | null>(null);
   const [matched, setMatched] = useState<Set<string>>(() => new Set());
-  const [wrongPair, setWrongPair] = useState<{ left: string; right: string } | null>(
-    null,
-  );
   const [mistakes, setMistakes] = useState(0);
   const [finished, setFinished] = useState(false);
   const completeEasyRound = useLearnerStore((s) => s.completeEasyRound);
@@ -33,7 +30,6 @@ export function MatchingRound() {
 
   function pickLeft(id: string) {
     if (matched.has(id) || finished) return;
-    setWrongPair(null);
     setSelectedLeft(id);
   }
 
@@ -44,7 +40,6 @@ export function MatchingRound() {
       next.add(id);
       setMatched(next);
       setSelectedLeft(null);
-      setWrongPair(null);
       if (next.size >= pairs.length) {
         completeEasyRound(pairs.length);
         setFinished(true);
@@ -52,14 +47,12 @@ export function MatchingRound() {
       return;
     }
     setMistakes((m) => m + 1);
-    setWrongPair({ left: selectedLeft, right: id });
     setSelectedLeft(null);
   }
 
   function restart() {
     setSelectedLeft(null);
     setMatched(new Set());
-    setWrongPair(null);
     setMistakes(0);
     setFinished(false);
   }
@@ -92,7 +85,6 @@ export function MatchingRound() {
           {leftOrder.map((id) => {
             const done = matched.has(id);
             const active = selectedLeft === id;
-            const wrong = wrongPair?.left === id;
             return (
               <button
                 key={`l-${id}`}
@@ -101,12 +93,10 @@ export function MatchingRound() {
                 onClick={() => pickLeft(id)}
                 className={`w-full rounded-xl border px-4 py-3 text-left text-sm transition ${
                   done
-                    ? "border-[var(--ok-border)] bg-[var(--ok-bg)] text-[var(--ok-fg)]"
+                    ? "border-[var(--line)] text-[var(--muted)] opacity-60"
                     : active
                       ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--foam)]"
-                      : wrong
-                        ? "border-[var(--danger-border)] bg-[var(--danger-bg)] text-[var(--danger-fg)]"
-                        : "border-[var(--line)] text-[var(--foam)] hover:border-[var(--accent)]"
+                      : "border-[var(--line)] text-[var(--foam)] hover:border-[var(--accent)]"
                 }`}
               >
                 {byId[id]?.term}
@@ -120,7 +110,6 @@ export function MatchingRound() {
           </p>
           {rightOrder.map((id) => {
             const done = matched.has(id);
-            const wrong = wrongPair?.right === id;
             return (
               <button
                 key={`r-${id}`}
@@ -129,10 +118,8 @@ export function MatchingRound() {
                 onClick={() => pickRight(id)}
                 className={`w-full rounded-xl border px-4 py-3 text-left text-sm transition ${
                   done
-                    ? "border-[var(--ok-border)] bg-[var(--ok-bg)] text-[var(--ok-fg)]"
-                    : wrong
-                      ? "border-[var(--danger-border)] bg-[var(--danger-bg)] text-[var(--danger-fg)]"
-                      : "border-[var(--line)] text-[var(--foam)] hover:border-[var(--accent)] disabled:opacity-40"
+                    ? "border-[var(--line)] text-[var(--muted)] opacity-60"
+                    : "border-[var(--line)] text-[var(--foam)] hover:border-[var(--accent)] disabled:opacity-40"
                 }`}
               >
                 {byId[id]?.definition}

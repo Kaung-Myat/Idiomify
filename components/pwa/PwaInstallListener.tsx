@@ -29,5 +29,13 @@ export function PwaInstallListener() {
     };
   }, [setDeferredPrompt, clearDeferredPrompt]);
 
+  useEffect(() => {
+    if (process.env.NODE_ENV !== "development") return;
+    if (!("serviceWorker" in navigator)) return;
+    void navigator.serviceWorker.getRegistrations().then((regs) => {
+      for (const reg of regs) void reg.unregister();
+    });
+  }, []);
+
   return null;
 }

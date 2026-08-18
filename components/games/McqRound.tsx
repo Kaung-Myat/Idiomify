@@ -78,22 +78,18 @@ export function McqRound() {
         </h2>
         <div className="mt-5 grid gap-2">
           {question.options.map((option, i) => {
-            let style =
-              "border-[var(--line)] hover:border-[var(--accent)] text-left";
-            if (revealed) {
-              if (i === question.answerIndex) {
-                style = "border-[var(--ok-border)] bg-[var(--ok-bg)]";
-              } else if (i === selected) {
-                style = "border-[var(--danger-border)] bg-[var(--danger-bg)]";
-              }
-            }
+            const isSelected = selected === i;
             return (
               <button
-                key={option}
+                key={`${question.id}-${i}`}
                 type="button"
                 disabled={revealed}
                 onClick={() => choose(i)}
-                className={`rounded-xl border px-4 py-3 text-sm text-[var(--foam)] transition ${style}`}
+                className={`rounded-xl border px-4 py-3 text-left text-sm text-[var(--foam)] transition disabled:cursor-default disabled:opacity-100 ${
+                  isSelected
+                    ? "border-[var(--accent)] bg-[var(--accent)]/10"
+                    : "border-[var(--line)] bg-[var(--surface)] hover:border-[var(--accent)]"
+                }`}
               >
                 {option}
               </button>

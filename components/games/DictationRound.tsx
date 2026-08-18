@@ -17,44 +17,37 @@ export function DictationRound() {
   const [index, setIndex] = useState(0);
   const [answer, setAnswer] = useState("");
   const [played, setPlayed] = useState(false);
-  const [revealed, setRevealed] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
   const [finished, setFinished] = useState(false);
   const completeMediumRound = useLearnerStore((s) => s.completeMediumRound);
 
   const question = questions[index];
-  const isCorrect = normalizeAnswer(answer) === normalizeAnswer(question.speak);
 
   function play() {
     speakText(question.speak);
     setPlayed(true);
   }
 
-  function check() {
-    if (revealed || !played) return;
-    setRevealed(true);
-    if (normalizeAnswer(answer) === normalizeAnswer(question.speak)) {
-      setCorrectCount((c) => c + 1);
-    }
-  }
-
   function next() {
+    if (!played || !answer.trim()) return;
+    const ok = normalizeAnswer(answer) === normalizeAnswer(question.speak);
+    const nextCorrect = correctCount + (ok ? 1 : 0);
     if (index + 1 >= questions.length) {
-      completeMediumRound(correctCount);
+      completeMediumRound(nextCorrect);
+      setCorrectCount(nextCorrect);
       setFinished(true);
       return;
     }
+    setCorrectCount(nextCorrect);
     setIndex((i) => i + 1);
     setAnswer("");
     setPlayed(false);
-    setRevealed(false);
   }
 
   function restart() {
     setIndex(0);
     setAnswer("");
     setPlayed(false);
-    setRevealed(false);
     setCorrectCount(0);
     setFinished(false);
   }
@@ -99,37 +92,19 @@ export function DictationRound() {
         <input
           value={answer}
           onChange={(e) => setAnswer(e.target.value)}
-          disabled={!played || revealed}
+          disabled={!played}
           placeholder={t.games.medium.dictationPlaceholder}
           className="mt-5 w-full rounded-xl border border-[var(--line)] bg-[var(--card-soft)] px-4 py-3 text-[var(--foam)] outline-none ring-[var(--accent)] focus:ring-2 disabled:opacity-50"
         />
 
-        {revealed ? (
-          <p
-            className={`mt-3 text-sm ${
-              isCorrect ? "text-[var(--ok-fg)]" : "text-[var(--danger-fg)]"
-            }`}
+        <div className="mt-5 flex justify-end">
+          <Button
+            type="button"
+            onClick={next}
+            disabled={!played || !answer.trim()}
           >
-            {isCorrect
-              ? t.common.correct
-              : fmt(t.games.medium.notQuite, { answer: question.speak })}
-          </p>
-        ) : null}
-
-        <div className="mt-5 flex justify-end gap-2">
-          {!revealed ? (
-            <Button
-              type="button"
-              onClick={check}
-              disabled={!played || !answer.trim()}
-            >
-              {t.common.check}
-            </Button>
-          ) : (
-            <Button type="button" onClick={next}>
-              {index + 1 >= questions.length ? t.common.finish : t.common.next}
-            </Button>
-          )}
+            {index + 1 >= questions.length ? t.common.finish : t.common.next}
+          </Button>
         </div>
       </article>
     </div>

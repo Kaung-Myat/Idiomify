@@ -22,8 +22,6 @@ export function ClozeRound() {
   const completeMediumRound = useLearnerStore((s) => s.completeMediumRound);
 
   const question = questions[index];
-  const isCorrect =
-    normalizeText(answer) === normalizeText(question.answer);
 
   function check() {
     if (revealed) return;
@@ -81,9 +79,6 @@ export function ClozeRound() {
         <h2 className="mt-2 font-[family-name:var(--font-display)] text-2xl text-[var(--foam)]">
           {question.sentence}
         </h2>
-        <p className="mt-2 text-sm text-[var(--muted)]">
-          {fmt(t.games.medium.hint, { hint: question.hint })}
-        </p>
         <input
           value={answer}
           onChange={(e) => setAnswer(e.target.value)}
@@ -91,17 +86,6 @@ export function ClozeRound() {
           placeholder={t.games.medium.placeholder}
           className="mt-5 w-full rounded-xl border border-[var(--line)] bg-[var(--card-soft)] px-4 py-3 text-[var(--foam)] outline-none ring-[var(--accent)] focus:ring-2"
         />
-        {revealed ? (
-          <p
-            className={`mt-3 text-sm ${
-              isCorrect ? "text-[var(--ok-fg)]" : "text-[var(--danger-fg)]"
-            }`}
-          >
-            {isCorrect
-              ? t.common.correct
-              : fmt(t.games.medium.notQuite, { answer: question.answer })}
-          </p>
-        ) : null}
         <div className="mt-5 flex justify-end gap-2">
           {!revealed ? (
             <Button type="button" onClick={check} disabled={!answer.trim()}>

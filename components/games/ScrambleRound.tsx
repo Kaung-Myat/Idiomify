@@ -109,9 +109,6 @@ export function ScrambleRound() {
         <h2 className="mt-2 font-[family-name:var(--font-display)] text-xl text-[var(--foam)] sm:text-2xl">
           {question.sentence}
         </h2>
-        <p className="mt-2 text-sm text-[var(--muted)]">
-          {fmt(t.games.medium.hint, { hint: question.hint })}
-        </p>
 
         <div className="mt-5 min-h-[3.25rem] rounded-2xl border border-dashed border-[var(--line)] bg-[var(--card-soft)] px-3 py-3">
           <div className="flex flex-wrap gap-2">
@@ -148,18 +145,6 @@ export function ScrambleRound() {
             </button>
           ))}
         </div>
-
-        {revealed ? (
-          <p
-            className={`mt-4 text-sm ${
-              isCorrect ? "text-[var(--ok-fg)]" : "text-[var(--danger-fg)]"
-            }`}
-          >
-            {isCorrect
-              ? t.common.correct
-              : fmt(t.games.medium.notQuite, { answer: question.answer })}
-          </p>
-        ) : null}
 
         <div className="mt-5 flex justify-end gap-2">
           {!revealed ? (
