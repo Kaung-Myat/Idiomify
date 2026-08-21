@@ -15,7 +15,7 @@ import {
   todayKey,
 } from "@/lib/games/utils";
 import { fmt } from "@/lib/i18n";
-import { speakText } from "@/lib/speech";
+import { speakText, stopSpeaking } from "@/lib/speech";
 import { useDailyScoresStore } from "@/lib/daily-scores-store";
 import { useLearnerStore } from "@/lib/store";
 import { useT } from "@/lib/locale-store";
@@ -117,6 +117,7 @@ export function DailyChallengeRound() {
   const step = steps[index];
 
   useEffect(() => {
+    stopSpeaking();
     setRevealed(false);
     setSelected(null);
     setTextAnswer("");
@@ -129,6 +130,8 @@ export function DailyChallengeRound() {
       setBuilt([]);
     }
   }, [index, step]);
+
+  useEffect(() => () => stopSpeaking(), []);
 
   function awardAndAdvance(points: number) {
     const nextScore = score + points;

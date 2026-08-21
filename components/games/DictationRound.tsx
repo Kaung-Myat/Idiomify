@@ -1,13 +1,13 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { GameResult } from "@/components/games/GameResult";
 import { Progress } from "@/components/ui/Progress";
 import { games } from "@/lib/content";
 import { normalizeAnswer, pickRandom } from "@/lib/games/utils";
 import { fmt } from "@/lib/i18n";
-import { speakText } from "@/lib/speech";
+import { isSpeechSynthesisSupported, speakText, stopSpeaking } from "@/lib/speech";
 import { useLearnerStore } from "@/lib/store";
 import { useT } from "@/lib/locale-store";
 
@@ -22,14 +22,23 @@ export function DictationRound() {
   const completeMediumRound = useLearnerStore((s) => s.completeMediumRound);
 
   const question = questions[index];
+  const canSpeak = isSpeechSynthesisSupported();
+
+  useEffect(() => () => stopSpeaking(), []);
+
+  useEffect(() => {
+    stopSpeaking();
+  }, [index]);
 
   function play() {
+    if (!canSpeak) return;
     speakText(question.speak);
     setPlayed(true);
   }
 
   function next() {
     if (!played || !answer.trim()) return;
+    stopSpeaking();
     const ok = normalizeAnswer(answer) === normalizeAnswer(question.speak);
     const nextCorrect = correctCount + (ok ? 1 : 0);
     if (index + 1 >= questions.length) {
@@ -45,6 +54,7 @@ export function DictationRound() {
   }
 
   function restart() {
+    stopSpeaking();
     setIndex(0);
     setAnswer("");
     setPlayed(false);
@@ -85,9 +95,20 @@ export function DictationRound() {
           {t.games.medium.dictationHint}
         </p>
 
-        <Button type="button" className="mt-5" onClick={play}>
+        <Button
+          type="button"
+          className="mt-5"
+          onClick={play}
+          disabled={!canSpeak}
+        >
           {played ? t.games.medium.replayAudio : t.games.medium.playAudio}
         </Button>
+
+        {!canSpeak ? (
+          <p className="mt-3 text-sm text-[var(--danger-fg)]">
+            {t.games.medium.audioUnsupported}
+          </p>
+        ) : null}
 
         <input
           value={answer}

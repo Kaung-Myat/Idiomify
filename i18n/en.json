@@ -274,6 +274,7 @@
       "listeningHint": "Play the audio first. Options unlock after you listen.",
       "playAudio": "Play audio",
       "replayAudio": "Replay audio",
+      "audioUnsupported": "Speech audio is not supported in this browser.",
       "listenFirst": "Listen to the audio before answering.",
       "listeningComplete": "Listening round complete",
       "listeningResult": "You got {correct}/{total} correct",

@@ -274,6 +274,7 @@
       "listeningHint": "အရင် audio နားထောင်ပါ။ နားထောင်ပြီးမှ options ဖြေနိုင်မည်။",
       "playAudio": "Audio ဖွင့်မည်",
       "replayAudio": "Audio ထပ်ဖွင့်မည်",
+      "audioUnsupported": "ဤ browser တွင် speech audio မပံ့ပိုးပါ။",
       "listenFirst": "မဖြေခင် audio ကို နားထောင်ပါ။",
       "listeningComplete": "Listening round ပြီးပါပြီ",
       "listeningResult": "{correct}/{total} မှန်ပါတယ်",
